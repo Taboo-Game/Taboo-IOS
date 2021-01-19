@@ -9,11 +9,30 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    
+    @IBOutlet weak var classicGame: UIButton!
+    
+    @IBOutlet weak var drawGame: UIButton!
+    
+    @IBOutlet weak var settings: UIButton!
+    
+    @IBOutlet weak var infoGame: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        classicGame.layer.cornerRadius = classicGame.frame.height/4
+        drawGame.layer.cornerRadius = drawGame.frame.height/4
+        settings.layer.cornerRadius = settings.frame.height/4
+        infoGame.layer.cornerRadius = infoGame.frame.height/4
+        
         // Do any additional setup after loading the view.
     }
 
-
+    @IBAction func classicGameClicked(_ sender: Any) {
+        performSegue(withIdentifier: "toTeams", sender: nil)
+    }
+    
+    
 }
 

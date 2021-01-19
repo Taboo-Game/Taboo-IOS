@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uK6-1m-aCK">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--First Screen View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Taboo_Game" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="FirstScreenViewController" customModule="Taboo_Game" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -38,68 +38,224 @@
         <!--View Controller-->
         <scene sceneID="cye-TB-EWu">
             <objects>
-                <viewController id="uK6-1m-aCK" sceneMemberID="viewController">
+                <viewController id="uK6-1m-aCK" customClass="ViewController" customModule="Taboo_Game" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Jgi-M0-uH0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ifW-Zo-UEf">
-                                <rect key="frame" x="107" y="148" width="200" height="200"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bob" translatesAutoresizingMaskIntoConstraints="NO" id="ifW-Zo-UEf">
+                                <rect key="frame" x="107" y="86" width="200" height="200"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dht-Dn-gsO">
-                                <rect key="frame" x="82" y="423" width="250" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.20109963580000001" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dht-Dn-gsO">
+                                <rect key="frame" x="82" y="352" width="250" height="39"/>
+                                <color key="backgroundColor" red="1" green="0.4483361851426565" blue="0.49799131771946448" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <state key="normal" title="Klasik Oyun">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="classciGameClicked:" destination="88n-je-k37" eventType="touchUpInside" id="Oz8-ds-BJO"/>
+                                    <action selector="classicGame:" destination="88n-je-k37" eventType="touchUpInside" id="USj-2E-Y3T"/>
+                                    <action selector="classicGameClicked:" destination="uK6-1m-aCK" eventType="touchUpInside" id="fnq-o7-MXt"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t1M-hh-yxF">
-                                <rect key="frame" x="82" y="523" width="250" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.20109963580000001" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t1M-hh-yxF">
+                                <rect key="frame" x="82" y="451" width="250" height="39"/>
+                                <color key="backgroundColor" red="1" green="0.44833618510000001" blue="0.49799131769999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <state key="normal" title="Çizerek Anlat">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hhD-hk-Go0">
-                                <rect key="frame" x="82" y="623" width="250" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.20109963580000001" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hhD-hk-Go0">
+                                <rect key="frame" x="82" y="550" width="250" height="39"/>
+                                <color key="backgroundColor" red="1" green="0.44833618510000001" blue="0.49799131769999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <state key="normal" title="Ayarlar">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Go-7C-aka">
-                                <rect key="frame" x="82" y="723" width="250" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.20109963580000001" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Go-7C-aka">
+                                <rect key="frame" x="82" y="649" width="250" height="39"/>
+                                <color key="backgroundColor" red="1" green="0.44833618510000001" blue="0.49799131769999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <state key="normal" title="Oyun Hakkında">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="E9g-Gh-eLf">
+                                <rect key="frame" x="33" y="768" width="348" height="81"/>
+                                <color key="backgroundColor" red="1" green="0.44136497670000002" blue="0.5510757664" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="LDg-RR-Bpc"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="LDg-RR-Bpc" firstAttribute="bottom" secondItem="ifW-Zo-UEf" secondAttribute="bottom" constant="514" id="0wV-q0-9TR"/>
+                            <constraint firstItem="LDg-RR-Bpc" firstAttribute="bottom" secondItem="ifW-Zo-UEf" secondAttribute="bottom" constant="576" id="0wV-q0-9TR"/>
+                            <constraint firstItem="hhD-hk-Go0" firstAttribute="leading" secondItem="LDg-RR-Bpc" secondAttribute="leading" constant="82" id="0z7-0i-cx1"/>
+                            <constraint firstItem="hhD-hk-Go0" firstAttribute="trailing" secondItem="Dht-Dn-gsO" secondAttribute="trailing" id="2Ba-TW-2Aw"/>
+                            <constraint firstItem="t1M-hh-yxF" firstAttribute="top" secondItem="Dht-Dn-gsO" secondAttribute="bottom" constant="60" id="6iK-Tk-dmY"/>
                             <constraint firstItem="ifW-Zo-UEf" firstAttribute="centerX" secondItem="Jgi-M0-uH0" secondAttribute="centerX" id="8ba-CU-gbx"/>
+                            <constraint firstItem="hhD-hk-Go0" firstAttribute="top" secondItem="t1M-hh-yxF" secondAttribute="bottom" constant="60" id="JJj-0a-xyi"/>
+                            <constraint firstItem="LDg-RR-Bpc" firstAttribute="bottom" secondItem="E9g-Gh-eLf" secondAttribute="bottom" constant="13" id="KmD-8T-4gI"/>
+                            <constraint firstItem="8Go-7C-aka" firstAttribute="top" secondItem="hhD-hk-Go0" secondAttribute="bottom" constant="60" id="OZf-gC-UQb"/>
+                            <constraint firstItem="E9g-Gh-eLf" firstAttribute="leading" secondItem="LDg-RR-Bpc" secondAttribute="leading" constant="33" id="PUi-1Z-H85"/>
                             <constraint firstItem="ifW-Zo-UEf" firstAttribute="leading" secondItem="LDg-RR-Bpc" secondAttribute="leading" constant="107" id="X1W-ID-JKL"/>
-                            <constraint firstItem="ifW-Zo-UEf" firstAttribute="top" secondItem="LDg-RR-Bpc" secondAttribute="top" constant="104" id="XNo-7t-SqL"/>
+                            <constraint firstItem="ifW-Zo-UEf" firstAttribute="top" secondItem="LDg-RR-Bpc" secondAttribute="top" constant="42" id="XNo-7t-SqL"/>
+                            <constraint firstItem="t1M-hh-yxF" firstAttribute="top" secondItem="Dht-Dn-gsO" secondAttribute="bottom" constant="60" id="bUR-2i-Twf"/>
+                            <constraint firstItem="Dht-Dn-gsO" firstAttribute="top" secondItem="ifW-Zo-UEf" secondAttribute="bottom" constant="66" id="bXi-nx-FfX"/>
+                            <constraint firstItem="E9g-Gh-eLf" firstAttribute="centerX" secondItem="8Go-7C-aka" secondAttribute="centerX" id="efy-Vn-A2Y"/>
+                            <constraint firstItem="8Go-7C-aka" firstAttribute="top" secondItem="hhD-hk-Go0" secondAttribute="bottom" constant="60" id="g5K-7Y-4GK"/>
+                            <constraint firstItem="hhD-hk-Go0" firstAttribute="leading" secondItem="Dht-Dn-gsO" secondAttribute="leading" id="kK7-hs-XqV"/>
+                            <constraint firstItem="hhD-hk-Go0" firstAttribute="trailing" secondItem="8Go-7C-aka" secondAttribute="trailing" id="mLZ-ot-OpD"/>
+                            <constraint firstItem="hhD-hk-Go0" firstAttribute="leading" secondItem="8Go-7C-aka" secondAttribute="leading" id="n2i-XS-hen"/>
+                            <constraint firstItem="hhD-hk-Go0" firstAttribute="top" secondItem="t1M-hh-yxF" secondAttribute="bottom" constant="60" id="nJ3-Us-SGa"/>
+                            <constraint firstItem="hhD-hk-Go0" firstAttribute="trailing" secondItem="t1M-hh-yxF" secondAttribute="trailing" id="nlT-GZ-6u7"/>
+                            <constraint firstItem="hhD-hk-Go0" firstAttribute="centerX" secondItem="ifW-Zo-UEf" secondAttribute="centerX" id="okR-LG-BVu"/>
+                            <constraint firstItem="E9g-Gh-eLf" firstAttribute="top" secondItem="8Go-7C-aka" secondAttribute="bottom" constant="80" id="pHt-4Z-cx1"/>
+                            <constraint firstItem="hhD-hk-Go0" firstAttribute="leading" secondItem="t1M-hh-yxF" secondAttribute="leading" id="xdL-Rq-vxh"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="classicGame" destination="Dht-Dn-gsO" id="0eP-pZ-iOc"/>
+                        <outlet property="drawGame" destination="t1M-hh-yxF" id="EpE-OQ-RXC"/>
+                        <outlet property="infoGame" destination="8Go-7C-aka" id="6jQ-Gf-Eac"/>
+                        <outlet property="settings" destination="hhD-hk-Go0" id="frm-Z6-6GC"/>
+                        <segue destination="DBt-Gm-FCt" kind="presentation" identifier="toTeams" modalPresentationStyle="fullScreen" id="1oJ-ES-r3D"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S4c-yr-ldG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="88n-je-k37" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="838" y="77"/>
+            <point key="canvasLocation" x="837.68115942028987" y="76.339285714285708"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Kn6-Vy-fOG">
+            <objects>
+                <viewController id="Ext-Ve-8Du" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gun-gS-6ei">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="0gd-8q-POV"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f0v-tt-Vak" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="838" y="842"/>
+        </scene>
+        <!--Teams View Controller-->
+        <scene sceneID="G4s-hM-Jx3">
+            <objects>
+                <viewController id="DBt-Gm-FCt" customClass="TeamsViewController" customModule="Taboo_Game" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4zq-yq-Iep">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Takımlar" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P3K-sY-cKq">
+                                <rect key="frame" x="56" y="97" width="300" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.44833618510000001" blue="0.49799131769999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="2. Takım" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0b7-5v-oPI">
+                                <rect key="frame" x="-1" y="442" width="250" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.44833618510000001" blue="0.49799131769999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="____________" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WeP-Qh-qe3">
+                                <rect key="frame" x="-1" y="412" width="160" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.45742413679999999" blue="0.51693458039999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1. Takım" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xFg-r3-qdm">
+                                <rect key="frame" x="154" y="288" width="250" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.44833618510000001" blue="0.49799131769999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="____________" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="poF-gy-oBB">
+                                <rect key="frame" x="254" y="258" width="160" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.45742413679999999" blue="0.51693458039999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gdV-or-NnC">
+                                <rect key="frame" x="-94" y="713" width="600" height="600"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fYP-Wq-iO4">
+                                        <rect key="frame" x="225" y="-25" width="150" height="99"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                        <state key="normal" title="Oyuna Başla">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gHa-hM-U0p">
+                                        <rect key="frame" x="127" y="8" width="60" height="60"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" image="snow" catalog="system">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.44833618510000001" blue="0.49799131769999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="hqt-zO-lMO"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="OyC-vI-bGD"/>
+                    <connections>
+                        <outlet property="firstTeamLabel" destination="xFg-r3-qdm" id="M2s-HW-QrA"/>
+                        <outlet property="firstTeamName" destination="poF-gy-oBB" id="Fvc-JW-OAe"/>
+                        <outlet property="homeButton" destination="gHa-hM-U0p" id="D3v-yo-Wrf"/>
+                        <outlet property="oYeay" destination="gdV-or-NnC" id="tUN-aL-wTa"/>
+                        <outlet property="secondTeamLabel" destination="0b7-5v-oPI" id="7N8-oe-k4M"/>
+                        <outlet property="secondTeamName" destination="WeP-Qh-qe3" id="agS-Cu-tCM"/>
+                        <outlet property="startGame" destination="fYP-Wq-iO4" id="6Eq-ZM-PbU"/>
+                        <outlet property="teamsLabel" destination="P3K-sY-cKq" id="l14-T7-VXK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jPL-IY-mQI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1595.6521739130435" y="79.6875"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Y1t-Ia-H59">
+            <objects>
+                <viewController id="0oV-5W-TJm" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="28f-3s-nsv">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="GbB-0v-qqJ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="H5g-fT-ir8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2506" y="80"/>
         </scene>
     </scenes>
     <resources>
+        <image name="bob" width="600" height="552"/>
+        <image name="snow" catalog="system" width="121" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
