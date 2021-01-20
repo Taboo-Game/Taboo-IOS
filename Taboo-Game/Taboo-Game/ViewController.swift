@@ -29,8 +29,24 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
+    
+    
     @IBAction func classicGameClicked(_ sender: Any) {
         performSegue(withIdentifier: "toTeams", sender: nil)
+    }
+    
+    @IBAction func drawGameClicked(_ sender: Any) {
+        performSegue(withIdentifier: "toTeams", sender: nil)
+    }
+    
+    
+    @IBAction func settingsClicked(_ sender: Any) {
+        performSegue(withIdentifier: "toSettings", sender: nil)
+    }
+    
+    
+    @IBAction func infoClicked(_ sender: Any) {
+        
     }
     
     

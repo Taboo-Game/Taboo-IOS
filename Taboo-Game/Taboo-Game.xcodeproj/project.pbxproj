@@ -17,6 +17,11 @@
 		21A7ADE025B73A9300EC13A1 /* FirstScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A7ADDF25B73A9300EC13A1 /* FirstScreenViewController.swift */; };
 		21A7ADE325B73AA200EC13A1 /* TeamsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A7ADE225B73AA200EC13A1 /* TeamsViewController.swift */; };
 		21A7ADE625B7861B00EC13A1 /* Screenshot 2021-01-19 at 22.26.41.png in Resources */ = {isa = PBXBuildFile; fileRef = 21A7ADE525B7861B00EC13A1 /* Screenshot 2021-01-19 at 22.26.41.png */; };
+		21A7ADE925B78FBB00EC13A1 /* Screenshot 2021-01-19 at 23.07.47.png in Resources */ = {isa = PBXBuildFile; fileRef = 21A7ADE825B78FBB00EC13A1 /* Screenshot 2021-01-19 at 23.07.47.png */; };
+		21A7ADEC25B791DD00EC13A1 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A7ADEB25B791DD00EC13A1 /* SettingsViewController.swift */; };
+		21A7ADF025B7A58000EC13A1 /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A7ADEF25B7A57F00EC13A1 /* Test.swift */; };
+		21A7ADF325B7ACB000EC13A1 /* MyWordsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A7ADF225B7ACB000EC13A1 /* MyWordsViewController.swift */; };
+		21A7ADF625B7ACCF00EC13A1 /* AddWordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A7ADF525B7ACCF00EC13A1 /* AddWordViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +37,11 @@
 		21A7ADDF25B73A9300EC13A1 /* FirstScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstScreenViewController.swift; sourceTree = "<group>"; };
 		21A7ADE225B73AA200EC13A1 /* TeamsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsViewController.swift; sourceTree = "<group>"; };
 		21A7ADE525B7861B00EC13A1 /* Screenshot 2021-01-19 at 22.26.41.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screenshot 2021-01-19 at 22.26.41.png"; sourceTree = "<group>"; };
+		21A7ADE825B78FBB00EC13A1 /* Screenshot 2021-01-19 at 23.07.47.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screenshot 2021-01-19 at 23.07.47.png"; sourceTree = "<group>"; };
+		21A7ADEB25B791DD00EC13A1 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		21A7ADEF25B7A57F00EC13A1 /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
+		21A7ADF225B7ACB000EC13A1 /* MyWordsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWordsViewController.swift; sourceTree = "<group>"; };
+		21A7ADF525B7ACCF00EC13A1 /* AddWordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWordViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,16 +75,21 @@
 			isa = PBXGroup;
 			children = (
 				21A7ADC625B721FA00EC13A1 /* AppDelegate.swift */,
+				21A7ADEF25B7A57F00EC13A1 /* Test.swift */,
 				21A7ADC825B721FA00EC13A1 /* SceneDelegate.swift */,
 				21A7ADCA25B721FA00EC13A1 /* ViewController.swift */,
 				21A7ADE225B73AA200EC13A1 /* TeamsViewController.swift */,
 				21A7ADDF25B73A9300EC13A1 /* FirstScreenViewController.swift */,
+				21A7ADEB25B791DD00EC13A1 /* SettingsViewController.swift */,
 				21A7ADCC25B721FA00EC13A1 /* Main.storyboard */,
 				21A7ADCF25B721FC00EC13A1 /* Assets.xcassets */,
+				21A7ADE825B78FBB00EC13A1 /* Screenshot 2021-01-19 at 23.07.47.png */,
 				21A7ADE525B7861B00EC13A1 /* Screenshot 2021-01-19 at 22.26.41.png */,
 				21A7ADDC25B7322400EC13A1 /* Bob-from-the-minions-movie.jpg */,
 				21A7ADD125B721FC00EC13A1 /* LaunchScreen.storyboard */,
 				21A7ADD425B721FC00EC13A1 /* Info.plist */,
+				21A7ADF225B7ACB000EC13A1 /* MyWordsViewController.swift */,
+				21A7ADF525B7ACCF00EC13A1 /* AddWordViewController.swift */,
 			);
 			path = "Taboo-Game";
 			sourceTree = "<group>";
@@ -140,6 +155,7 @@
 				21A7ADD025B721FC00EC13A1 /* Assets.xcassets in Resources */,
 				21A7ADDD25B7322400EC13A1 /* Bob-from-the-minions-movie.jpg in Resources */,
 				21A7ADCE25B721FA00EC13A1 /* Main.storyboard in Resources */,
+				21A7ADE925B78FBB00EC13A1 /* Screenshot 2021-01-19 at 23.07.47.png in Resources */,
 				21A7ADE625B7861B00EC13A1 /* Screenshot 2021-01-19 at 22.26.41.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -152,7 +168,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				21A7ADCB25B721FA00EC13A1 /* ViewController.swift in Sources */,
+				21A7ADEC25B791DD00EC13A1 /* SettingsViewController.swift in Sources */,
+				21A7ADF625B7ACCF00EC13A1 /* AddWordViewController.swift in Sources */,
+				21A7ADF325B7ACB000EC13A1 /* MyWordsViewController.swift in Sources */,
 				21A7ADE025B73A9300EC13A1 /* FirstScreenViewController.swift in Sources */,
+				21A7ADF025B7A58000EC13A1 /* Test.swift in Sources */,
 				21A7ADC725B721FA00EC13A1 /* AppDelegate.swift in Sources */,
 				21A7ADE325B73AA200EC13A1 /* TeamsViewController.swift in Sources */,
 				21A7ADC925B721FA00EC13A1 /* SceneDelegate.swift in Sources */,
