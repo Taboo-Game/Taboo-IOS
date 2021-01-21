@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		131C1E2825B8ED800009B06D /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131C1E2725B8ED800009B06D /* Word.swift */; };
 		21A7ADC725B721FA00EC13A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A7ADC625B721FA00EC13A1 /* AppDelegate.swift */; };
 		21A7ADC925B721FA00EC13A1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A7ADC825B721FA00EC13A1 /* SceneDelegate.swift */; };
 		21A7ADCB25B721FA00EC13A1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A7ADCA25B721FA00EC13A1 /* ViewController.swift */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		131C1E2725B8ED800009B06D /* Word.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Word.swift; sourceTree = "<group>"; };
 		21A7ADC325B721FA00EC13A1 /* Taboo-Game.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Taboo-Game.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		21A7ADC625B721FA00EC13A1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		21A7ADC825B721FA00EC13A1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 				21A7ADE225B73AA200EC13A1 /* TeamsViewController.swift */,
 				21A7ADDF25B73A9300EC13A1 /* FirstScreenViewController.swift */,
 				21A7ADEB25B791DD00EC13A1 /* SettingsViewController.swift */,
+				131C1E2725B8ED800009B06D /* Word.swift */,
 				21A7ADCC25B721FA00EC13A1 /* Main.storyboard */,
 				21A7ADCF25B721FC00EC13A1 /* Assets.xcassets */,
 				21A7ADE825B78FBB00EC13A1 /* Screenshot 2021-01-19 at 23.07.47.png */,
@@ -174,6 +177,7 @@
 				21A7ADE025B73A9300EC13A1 /* FirstScreenViewController.swift in Sources */,
 				21A7ADF025B7A58000EC13A1 /* Test.swift in Sources */,
 				21A7ADC725B721FA00EC13A1 /* AppDelegate.swift in Sources */,
+				131C1E2825B8ED800009B06D /* Word.swift in Sources */,
 				21A7ADE325B73AA200EC13A1 /* TeamsViewController.swift in Sources */,
 				21A7ADC925B721FA00EC13A1 /* SceneDelegate.swift in Sources */,
 			);
