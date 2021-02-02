@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-
+		219BD32125C954D0001E72C1 /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = 219BD32025C954D0001E72C1 /* Word.swift */; };
+		219BD32425C95553001E72C1 /* PlayGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 219BD32325C95553001E72C1 /* PlayGameViewController.swift */; };
+		219BD32725C9558B001E72C1 /* ResultScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 219BD32625C9558B001E72C1 /* ResultScreenViewController.swift */; };
+		219BD32A25C955C8001E72C1 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 219BD32925C955C8001E72C1 /* SettingsViewController.swift */; };
 		21A7ADC725B721FA00EC13A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A7ADC625B721FA00EC13A1 /* AppDelegate.swift */; };
 		21A7ADC925B721FA00EC13A1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A7ADC825B721FA00EC13A1 /* SceneDelegate.swift */; };
 		21A7ADCB25B721FA00EC13A1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A7ADCA25B721FA00EC13A1 /* ViewController.swift */; };
@@ -25,7 +28,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-
+		219BD32025C954D0001E72C1 /* Word.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Word.swift; sourceTree = "<group>"; };
+		219BD32325C95553001E72C1 /* PlayGameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayGameViewController.swift; sourceTree = "<group>"; };
+		219BD32625C9558B001E72C1 /* ResultScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultScreenViewController.swift; sourceTree = "<group>"; };
+		219BD32925C955C8001E72C1 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		21A7ADC325B721FA00EC13A1 /* Taboo-Game.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Taboo-Game.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		21A7ADC625B721FA00EC13A1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		21A7ADC825B721FA00EC13A1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -76,24 +82,23 @@
 			children = (
 				21A7ADC625B721FA00EC13A1 /* AppDelegate.swift */,
 				21A7ADC825B721FA00EC13A1 /* SceneDelegate.swift */,
+				219BD32925C955C8001E72C1 /* SettingsViewController.swift */,
 				21A7ADCA25B721FA00EC13A1 /* ViewController.swift */,
 				21A7ADE225B73AA200EC13A1 /* TeamsViewController.swift */,
 				21A7ADDF25B73A9300EC13A1 /* FirstScreenViewController.swift */,
 				21A7ADEB25B791DD00EC13A1 /* SettingsViewController.swift */,
-
-				2116115D25B8EDC000589C24 /* Word.swift */,
-
+				219BD32625C9558B001E72C1 /* ResultScreenViewController.swift */,
 				21A7ADCC25B721FA00EC13A1 /* Main.storyboard */,
+				219BD32325C95553001E72C1 /* PlayGameViewController.swift */,
 				21A7ADCF25B721FC00EC13A1 /* Assets.xcassets */,
 				21A7ADE825B78FBB00EC13A1 /* Screenshot 2021-01-19 at 23.07.47.png */,
 				21A7ADE525B7861B00EC13A1 /* Screenshot 2021-01-19 at 22.26.41.png */,
 				21A7ADDC25B7322400EC13A1 /* Bob-from-the-minions-movie.jpg */,
+				219BD32025C954D0001E72C1 /* Word.swift */,
 				21A7ADD125B721FC00EC13A1 /* LaunchScreen.storyboard */,
 				21A7ADD425B721FC00EC13A1 /* Info.plist */,
 				21A7ADF225B7ACB000EC13A1 /* MyWordsViewController.swift */,
 				21A7ADF525B7ACCF00EC13A1 /* AddWordViewController.swift */,
-				2116116025B8EFF500589C24 /* PlayGameViewController.swift */,
-				2116116425B90FE900589C24 /* ResultScreenViewController.swift */,
 			);
 			path = "Taboo-Game";
 			sourceTree = "<group>";
@@ -171,18 +176,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2116116525B90FE900589C24 /* ResultScreenViewController.swift in Sources */,
-				2116116125B8EFF500589C24 /* PlayGameViewController.swift in Sources */,
+				219BD32725C9558B001E72C1 /* ResultScreenViewController.swift in Sources */,
 				21A7ADCB25B721FA00EC13A1 /* ViewController.swift in Sources */,
 				21A7ADEC25B791DD00EC13A1 /* SettingsViewController.swift in Sources */,
+				219BD32425C95553001E72C1 /* PlayGameViewController.swift in Sources */,
+				219BD32125C954D0001E72C1 /* Word.swift in Sources */,
 				21A7ADF625B7ACCF00EC13A1 /* AddWordViewController.swift in Sources */,
 				21A7ADF325B7ACB000EC13A1 /* MyWordsViewController.swift in Sources */,
 				21A7ADE025B73A9300EC13A1 /* FirstScreenViewController.swift in Sources */,
 				21A7ADC725B721FA00EC13A1 /* AppDelegate.swift in Sources */,
-				131C1E2825B8ED800009B06D /* Word.swift in Sources */,
-
 				21A7ADE325B73AA200EC13A1 /* TeamsViewController.swift in Sources */,
 				21A7ADC925B721FA00EC13A1 /* SceneDelegate.swift in Sources */,
+				219BD32A25C955C8001E72C1 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
