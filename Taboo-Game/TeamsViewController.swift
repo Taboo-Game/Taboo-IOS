@@ -47,6 +47,10 @@ class TeamsViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         
     }
+    @IBAction func startGameClicked(_ sender: Any) {
+        performSegue(withIdentifier: "toPlayGame", sender: nil)
+    }
+    
     
 
     /*

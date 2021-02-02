@@ -7,7 +7,7 @@
 
 import Foundation
 
-var wordsArray : [Word]?
+var wordsArray : [Word] = []
 
 class Word{
     
@@ -17,12 +17,19 @@ class Word{
     var wordForbidden3: String
     var wordForbidden4: String
     var wordForbidden5: String
+
     
+
     init(wordDescribe: String,wordForbidden1: String,wordForbidden2: String,wordForbidden3: String,wordForbidden4: String,wordForbidden5: String ) {
+    
         self.wordDescribe = wordDescribe
+        
         self.wordForbidden1 = wordForbidden1
+        
         self.wordForbidden2 = wordForbidden2
+        
         self.wordForbidden3 = wordForbidden3
+        
         self.wordForbidden4 = wordForbidden4
         self.wordForbidden5 = wordForbidden5
         
@@ -32,72 +39,77 @@ class Word{
 
 func wordLists ()
 {
-    wordsArray?.append(Word(wordDescribe: "FİİL", wordForbidden1: "İŞ", wordForbidden2: "OLUŞ", wordForbidden3: "HAREKET", wordForbidden4: "EYLEM", wordForbidden5: "SÖZCÜK"))
-    wordsArray?.append(Word(wordDescribe: "UYAK", wordForbidden1: "ŞİİR", wordForbidden2: "DİZE", wordForbidden3: "BENZERLİK", wordForbidden4: "KAFİYE", wordForbidden5: "SES"))
-    wordsArray?.append(Word(wordDescribe: "SÖZLÜK", wordForbidden1: "ANLAM", wordForbidden2: "KELİME", wordForbidden3: "SÖZCÜK", wordForbidden4: "AÇIKLAMA", wordForbidden5: "LÜGAT"))
-    wordsArray?.append(Word(wordDescribe: "KUŞBAKIŞI ", wordForbidden1: "HARİTA", wordForbidden2: "TEPE", wordForbidden3: "YUKARI", wordForbidden4: "GÖRMEK", wordForbidden5: "KROKİ"))
-    wordsArray?.append(Word(wordDescribe: "OKKA", wordForbidden1: "AĞIRLIK", wordForbidden2: "ÖLÇÜ", wordForbidden3: "BİRİM", wordForbidden4: "KİLO", wordForbidden5: "TARTI"))
-    wordsArray?.append(Word(wordDescribe: "KÖK", wordForbidden1: "SÖZCÜK", wordForbidden2: "YAPIM", wordForbidden3: "ÇEKİM", wordForbidden4: "EK", wordForbidden5: "KELİME"))
-    wordsArray?.append(Word(wordDescribe: "ŞİİR", wordForbidden1: "ŞAİR", wordForbidden2: "MISRA", wordForbidden3: "DİZE", wordForbidden4: "KITA", wordForbidden5: "DÖRTLÜK"))
-    wordsArray?.append(Word(wordDescribe: "ÖYKÜ", wordForbidden1: "HİKÂYE", wordForbidden2: "KAHRAMAN", wordForbidden3: "YAZAR", wordForbidden4: "YER", wordForbidden5: "KİTAP"))
-    wordsArray?.append(Word(wordDescribe: "MASAL", wordForbidden1: "OLAĞANÜSTÜ", wordForbidden2: "KAHRAMAN", wordForbidden3: "YAZAR", wordForbidden4: "KELOĞLAN", wordForbidden5: "KİTAP"))
-    wordsArray?.append(Word(wordDescribe: "FAY", wordForbidden1: "HAT", wordForbidden2: "DEPREM", wordForbidden3: "KIRILMAK", wordForbidden4: "SARSILMAK", wordForbidden5: "İSTANBUL"))
-    wordsArray?.append(Word(wordDescribe: "KÜÇÜMSEME", wordForbidden1: "NİTELİK", wordForbidden2: "DEĞERSİZ", wordForbidden3: "YARGI", wordForbidden4: "CÜMLE", wordForbidden5: "AZIMSAMA"))
-    wordsArray?.append(Word(wordDescribe: "METRES", wordForbidden1: "KARI KOCA", wordForbidden2: "EVLİ", wordForbidden3: "ALDATMAK", wordForbidden4: "YASAK", wordForbidden5: "İLİŞKİ"))
-    wordsArray?.append(Word(wordDescribe: "FAX", wordForbidden1: "ÇEKMEK", wordForbidden2: "GÖNDERMEK", wordForbidden3: "YAZI", wordForbidden4: "KAĞIT", wordForbidden5: "FOTOKOPİ"))
-    wordsArray?.append(Word(wordDescribe: "GAZİ", wordForbidden1: "SAVAŞ", wordForbidden2: "YARALANMAK", wordForbidden3: "ŞEHİT", wordForbidden4: "İSTİKLAL MADALYASI", wordForbidden5: "ATATÜRK"))
-    wordsArray?.append(Word(wordDescribe: "VEKTÖR", wordForbidden1: "YÖN", wordForbidden2: "FİZİK", wordForbidden3: "SKALER", wordForbidden4: "ÇİZMEK", wordForbidden5: "DOĞRU"))
-    wordsArray?.append(Word(wordDescribe: "HASIRALTI ETMEK", wordForbidden1: "SAKLAMAK", wordForbidden2: "GİZLEMEK", wordForbidden3: "KORUMAK", wordForbidden4: "YOK ETMEK", wordForbidden5: "ÖRTBAS"))
-    wordsArray?.append(Word(wordDescribe: "VENEDİK", wordForbidden1: "GONDOL", wordForbidden2: "ÜLKE", wordForbidden3: "SU", wordForbidden4: "İTALYA", wordForbidden5: "YÜZMEK"))
-    wordsArray?.append(Word(wordDescribe: "SELÜLİT", wordForbidden1: "BACAK", wordForbidden2: "KADIN", wordForbidden3: "CİLT", wordForbidden4: "YAĞ", wordForbidden5: "PORTAKAL"))
-    wordsArray?.append(Word(wordDescribe: "NORM", wordForbidden1: "KURAL", wordForbidden2: "YERLEŞMİŞ", wordForbidden3: "İLKE", wordForbidden4: "YASA", wordForbidden5: "DÜZEN"))
-    wordsArray?.append(Word(wordDescribe: "ALT", wordForbidden1: "ÜST", wordForbidden2: "YER", wordForbidden3: "TABAN", wordForbidden4: "DERECE", wordForbidden5: "SINIF"))
-    wordsArray?.append(Word(wordDescribe: "ABONE", wordForbidden1: "YONCA EVCİMİK", wordForbidden2: "SATIN ALMAK", wordForbidden3: "ÜYE", wordForbidden4: "DERGİ", wordForbidden5: "GAZETE"))
-    wordsArray?.append(Word(wordDescribe: "TEZGAH", wordForbidden1: "KURMAK", wordForbidden2: "MASA", wordForbidden3: "MUTFAK", wordForbidden4: "SATICI", wordForbidden5: "BÜFE"))
-    wordsArray?.append(Word(wordDescribe: "TEMAS", wordForbidden1: "FİZİKSEL", wordForbidden2: "DEĞME", wordForbidden3: "DOKUNMA", wordForbidden4: "MÜNASEBET", wordForbidden5: "BULUŞMAK"))
-    wordsArray?.append(Word(wordDescribe: "EFSANE", wordForbidden1: "HAYALİ", wordForbidden2: "YARADILIŞ", wordForbidden3: "ÖYKÜ", wordForbidden4: "ABARTMAK", wordForbidden5: "SÖYLENCE"))
-    wordsArray?.append(Word(wordDescribe: "İMLA", wordForbidden1: "KURAL", wordForbidden2: "YAZIM", wordForbidden3: "DİL BİLGİSİ", wordForbidden4: "HATA", wordForbidden5: "TERİM"))
-    wordsArray?.append(Word(wordDescribe: "SAKAL", wordForbidden1: "KIL", wordForbidden2: "YÜZ", wordForbidden3: "TIRAŞ", wordForbidden4: "KESMEK", wordForbidden5: "TOP"))
-    wordsArray?.append(Word(wordDescribe: "LOSYON", wordForbidden1: "TIRAŞ", wordForbidden2: "KOLONYA", wordForbidden3: "PARFÜM", wordForbidden4: "KOKU", wordForbidden5: "BERBER"))
-    wordsArray?.append(Word(wordDescribe: "BARBAR", wordForbidden1: "KABA", wordForbidden2: "İLKEL", wordForbidden3: "KIRICI", wordForbidden4: "UYGARLAŞMA", wordForbidden5: "AKIN"))
-    wordsArray?.append(Word(wordDescribe: "FABL", wordForbidden1: "MASAL", wordForbidden2: "HAYVAN", wordForbidden3: "HİKAYE", wordForbidden4: "ÖYKÜ", wordForbidden5: "DERS"))
-    wordsArray?.append(Word(wordDescribe: "ABDESTHANE", wordForbidden1: "TUVALET", wordForbidden2: "WC", wordForbidden3: "HELA", wordForbidden4: "YÜZNUMARA", wordForbidden5: "ALMAK"))
-    wordsArray?.append(Word(wordDescribe: "HAKİ", wordForbidden1: "RENK", wordForbidden2: "YEŞİL", wordForbidden3: "KAHVERENGİ", wordForbidden4: "ÇALMAK", wordForbidden5: "KAÇMAK"))
-    wordsArray?.append(Word(wordDescribe: "LATİN AMERİKA", wordForbidden1: "GÜNEY", wordForbidden2: "KITA", wordForbidden3: "BREZİLYA", wordForbidden4: "ÜLKE", wordForbidden5: "ARJANTİN"))
-    wordsArray?.append(Word(wordDescribe: "DEFİNE", wordForbidden1: "HARİTA", wordForbidden2: "PARA", wordForbidden3: "ALTIN", wordForbidden4: "ALİ", wordForbidden5: "BABA"))
-    wordsArray?.append(Word(wordDescribe: "ARAMAK", wordForbidden1: "SAÇ", wordForbidden2: "ARAŞTIRMAK", wordForbidden3: "DERLEMEK", wordForbidden4: "ATEŞLEMEK", wordForbidden5: "AYIKLAMAK"))
-    wordsArray?.append(Word(wordDescribe: "İPUCU", wordForbidden1: "İZ", wordForbidden2: "EMARE", wordForbidden3: "VERMEK", wordForbidden4: "DEDEKTİF", wordForbidden5: "SIR"))
-    wordsArray?.append(Word(wordDescribe: "ALTIN", wordForbidden1: "TAKMAK", wordForbidden2: "DEĞERLİ", wordForbidden3: "KUYUMCU", wordForbidden4: "SARRAF", wordForbidden5: "ÇEYREK"))
-    wordsArray?.append(Word(wordDescribe: "AÇISAL HIZ", wordForbidden1: "FİZİK", wordForbidden2: "VEKTÖREL", wordForbidden3: "HAREKET", wordForbidden4: "DAİRESEL", wordForbidden5: "TARAMAK"))
-    wordsArray?.append(Word(wordDescribe: "SÜZMEK", wordForbidden1: "SU", wordForbidden2: "AYIRMAK", wordForbidden3: "SIVI", wordForbidden4: "MAKARNA", wordForbidden5: "KATI"))
-    wordsArray?.append(Word(wordDescribe: "KABAKULAK", wordForbidden1: "HASTALIK", wordForbidden2: "İLTİHAP", wordForbidden3: "ŞİŞMEK", wordForbidden4: "BEZ", wordForbidden5: "TÜKÜRÜK"))
-    wordsArray?.append(Word(wordDescribe: "KÜF", wordForbidden1: "EKMEK", wordForbidden2: "YEŞİL", wordForbidden3: "MANTAR", wordForbidden4: "BAKTERİ", wordForbidden5: "KURT"))
-    wordsArray?.append(Word(wordDescribe: "ANATOMİ", wordForbidden1: "VÜCUT", wordForbidden2: "SİSTEM", wordForbidden3: "İNCELEMEK", wordForbidden4: "ORGAN", wordForbidden5: "DİŞ"))
-    wordsArray?.append(Word(wordDescribe: "KARL MARX", wordForbidden1: "SOSYALİZM", wordForbidden2: "KOMÜNİZM", wordForbidden3: "FELSEFE", wordForbidden4: "MANİFESTO", wordForbidden5: "KAPİTAL"))
-    wordsArray?.append(Word(wordDescribe: "ALTERNATİF AKIM", wordForbidden1: "DOĞRU", wordForbidden2: "ELEKTRİK", wordForbidden3: "DEĞİŞKEN", wordForbidden4: "NİKOLA TESLA", wordForbidden5: "SİNÜS"))
-    wordsArray?.append(Word(wordDescribe: "FOTOKOPİ", wordForbidden1: "KOPYA", wordForbidden2: "MAKİNE", wordForbidden3: "FAX", wordForbidden4: "TARAMAK", wordForbidden5: "KIRTASİYE"))
-    wordsArray?.append(Word(wordDescribe: "BARKOD", wordForbidden1: "ÜRÜN", wordForbidden2: "FİYAT", wordForbidden3: "İMZA", wordForbidden4: "ÇİZGİ", wordForbidden5: "ALT"))
-    wordsArray?.append(Word(wordDescribe: "ODAK", wordForbidden1: "OPTİK", wordForbidden2: "IŞIK", wordForbidden3: "KAYNAK", wordForbidden4: "TOPLANMAK", wordForbidden5: "MİHRAK"))
-    wordsArray?.append(Word(wordDescribe: "MAKAS", wordForbidden1: "KUMAŞ", wordForbidden2: "KESMEK", wordForbidden3: "KAĞIT", wordForbidden4: "NİŞAN", wordForbidden5: "TERZİ"))
-    wordsArray?.append(Word(wordDescribe: "KANTİN", wordForbidden1: "OKUL", wordForbidden2: "TOST", wordForbidden3: "KAFETERYA ", wordForbidden4: "ÖĞRENCİ ", wordForbidden5: "YEMEK"))
-    wordsArray?.append(Word(wordDescribe: "İMA ETMEK", wordForbidden1: "ANLAM ", wordForbidden2: "İZ ", wordForbidden3: "DURUM ", wordForbidden4: "DAVRANIŞ ", wordForbidden5: "ALAMET"))
-    wordsArray?.append(Word(wordDescribe: "MÜHİMMAT", wordForbidden1: "DEPO ", wordForbidden2: "SAVAŞ ", wordForbidden3: "CEPHANE ", wordForbidden4: "ORDU ", wordForbidden5: "SİLAH"))
-    wordsArray?.append(Word(wordDescribe: "HIÇKIRIK", wordForbidden1: "SES ", wordForbidden2: "TUTMAK ", wordForbidden3: "DİYAFRAM ", wordForbidden4: "SU ", wordForbidden5: "NEFES"))
-    wordsArray?.append(Word(wordDescribe: "BUZ DEVRİ", wordForbidden1: "ESKİ ÇAĞ", wordForbidden2: "SOĞUK ", wordForbidden3: "ERİMEK ", wordForbidden4: "KAR ", wordForbidden5: "ÇİZGİ FİLM"))
-    wordsArray?.append(Word(wordDescribe: "SALSA", wordForbidden1: "SOS ", wordForbidden2: "DANS ", wordForbidden3: "LATİN ", wordForbidden4: "İSPANYOL ", wordForbidden5: "PARTİ"))
-    wordsArray?.append(Word(wordDescribe: "BONCUK", wordForbidden1: "KOLYE ", wordForbidden2: "TAKI ", wordForbidden3: "RENKLİ ", wordForbidden4: "KÜÇÜK ", wordForbidden5: "YUVARLAK"))
-    wordsArray?.append(Word(wordDescribe: "TRAVESTİ", wordForbidden1: "ERKEK ", wordForbidden2: "KADIN ", wordForbidden3: "TRANSSEKSÜEL ", wordForbidden4: "KILIK ", wordForbidden5: "GİRMEK"))
-    wordsArray?.append(Word(wordDescribe: "DAKTİLO", wordForbidden1: "YAZMAK ", wordForbidden2: "HARF ", wordForbidden3: "KAĞIT ", wordForbidden4: "TUŞ ", wordForbidden5: "STİLO"))
-    wordsArray?.append(Word(wordDescribe: "TELSİZ", wordForbidden1: "TELEFON ", wordForbidden2: "KONUŞMAK ", wordForbidden3: "POLİS ", wordForbidden4: "İLETİŞİM ", wordForbidden5: "BASMAK"))
-    wordsArray?.append(Word(wordDescribe: "SANDAL", wordForbidden1: "MOTOR ", wordForbidden2: "DENİZ ", wordForbidden3: "KÜREK ", wordForbidden4: "SEFA ", wordForbidden5: "BALIKÇI"))
-    wordsArray?.append(Word(wordDescribe: "HAÇ", wordForbidden1: "HRİSTİYANLIK", wordForbidden2: "ÇAĞLA ŞİKEL", wordForbidden3: "ARTI İŞARETİ", wordForbidden4: "İSA ", wordForbidden5: "ÇARMIH"))
-    wordsArray?.append(Word(wordDescribe: "ASİT", wordForbidden1: "MAVİ ", wordForbidden2: "KIRMIZI ", wordForbidden3: "TURNUSOL ", wordForbidden4: "BAZ ", wordForbidden5: "MİDE"))
-    wordsArray?.append(Word(wordDescribe: "KUŞ BAKIŞI", wordForbidden1: "YÜKSEK ", wordForbidden2: "GENEL ", wordForbidden3: "HAYVAN ", wordForbidden4: "GÖRMEK ", wordForbidden5: "ALAN"))
-    wordsArray?.append(Word(wordDescribe: "HATIR", wordForbidden1: "GÖNÜL", wordForbidden2: "KALP ", wordForbidden3: "HAFIZA ", wordForbidden4: "ZİHİN", wordForbidden5: "KIRMAK"))
-    wordsArray?.append(Word(wordDescribe: "İMRENMEK", wordForbidden1: "KISKANMAK ", wordForbidden2: "GIPTA ETMEK", wordForbidden3: "ÖZENMEK ", wordForbidden4: "CANI ÇEKMEK", wordForbidden5: "İSTEMEK"))
-    wordsArray?.append(Word(wordDescribe: "DUMUR", wordForbidden1: "KÖRELMEK ", wordForbidden2: "APTALLAŞMAK ", wordForbidden3: "ŞOK OLMAK ", wordForbidden4: "ŞAŞIRMAK ", wordForbidden5: "ŞAŞKINA DÖNMEK"))
-    wordsArray?.append(Word(wordDescribe: "KAHIR", wordForbidden1: "MAHVETME ", wordForbidden2: "PERİŞAN ", wordForbidden3: "EZME ", wordForbidden4: "ÇEKMEK ", wordForbidden5: "ETMEK"))
-
+    wordsArray.append(Word(wordDescribe: "FİİL", wordForbidden1: "İŞ", wordForbidden2: "OLUŞ", wordForbidden3: "HAREKET", wordForbidden4: "EYLEM", wordForbidden5: "SÖZCÜK"))
+    
+    wordsArray.append(Word(wordDescribe: "UYAK", wordForbidden1: "ŞİİR", wordForbidden2: "DİZE", wordForbidden3: "BENZERLİK", wordForbidden4: "KAFİYE", wordForbidden5: "SES"))
+    wordsArray.append(Word(wordDescribe: "SÖZLÜK", wordForbidden1: "ANLAM", wordForbidden2: "KELİME", wordForbidden3: "SÖZCÜK", wordForbidden4: "AÇIKLAMA", wordForbidden5: "LÜGAT"))
+    wordsArray.append(Word(wordDescribe: "KUŞBAKIŞI ", wordForbidden1: "HARİTA", wordForbidden2: "TEPE", wordForbidden3: "YUKARI", wordForbidden4: "GÖRMEK", wordForbidden5: "KROKİ"))
+    wordsArray.append(Word(wordDescribe: "OKKA", wordForbidden1: "AĞIRLIK", wordForbidden2: "ÖLÇÜ", wordForbidden3: "BİRİM", wordForbidden4: "KİLO", wordForbidden5: "TARTI"))
+    wordsArray.append(Word(wordDescribe: "KÖK", wordForbidden1: "SÖZCÜK", wordForbidden2: "YAPIM", wordForbidden3: "ÇEKİM", wordForbidden4: "EK", wordForbidden5: "KELİME"))
+    wordsArray.append(Word(wordDescribe: "ŞİİR", wordForbidden1: "ŞAİR", wordForbidden2: "MISRA", wordForbidden3: "DİZE", wordForbidden4: "KITA", wordForbidden5: "DÖRTLÜK"))
+    wordsArray.append(Word(wordDescribe: "ÖYKÜ", wordForbidden1: "HİKÂYE", wordForbidden2: "KAHRAMAN", wordForbidden3: "YAZAR", wordForbidden4: "YER", wordForbidden5: "KİTAP"))
+    wordsArray.append(Word(wordDescribe: "MASAL", wordForbidden1: "OLAĞANÜSTÜ", wordForbidden2: "KAHRAMAN", wordForbidden3: "YAZAR", wordForbidden4: "KELOĞLAN", wordForbidden5: "KİTAP"))
+    wordsArray.append(Word(wordDescribe: "FAY", wordForbidden1: "HAT", wordForbidden2: "DEPREM", wordForbidden3: "KIRILMAK", wordForbidden4: "SARSILMAK", wordForbidden5: "İSTANBUL"))
+    wordsArray.append(Word(wordDescribe: "KÜÇÜMSEME", wordForbidden1: "NİTELİK", wordForbidden2: "DEĞERSİZ", wordForbidden3: "YARGI", wordForbidden4: "CÜMLE", wordForbidden5: "AZIMSAMA"))
+    wordsArray.append(Word(wordDescribe: "METRES", wordForbidden1: "KARI KOCA", wordForbidden2: "EVLİ", wordForbidden3: "ALDATMAK", wordForbidden4: "YASAK", wordForbidden5: "İLİŞKİ"))
+    wordsArray.append(Word(wordDescribe: "FAX", wordForbidden1: "ÇEKMEK", wordForbidden2: "GÖNDERMEK", wordForbidden3: "YAZI", wordForbidden4: "KAĞIT", wordForbidden5: "FOTOKOPİ"))
+    wordsArray.append(Word(wordDescribe: "GAZİ", wordForbidden1: "SAVAŞ", wordForbidden2: "YARALANMAK", wordForbidden3: "ŞEHİT", wordForbidden4: "İSTİKLAL MADALYASI", wordForbidden5: "ATATÜRK"))
+    wordsArray.append(Word(wordDescribe: "VEKTÖR", wordForbidden1: "YÖN", wordForbidden2: "FİZİK", wordForbidden3: "SKALER", wordForbidden4: "ÇİZMEK", wordForbidden5: "DOĞRU"))
+    wordsArray.append(Word(wordDescribe: "HASIRALTI ETMEK", wordForbidden1: "SAKLAMAK", wordForbidden2: "GİZLEMEK", wordForbidden3: "KORUMAK", wordForbidden4: "YOK ETMEK", wordForbidden5: "ÖRTBAS"))
+    wordsArray.append(Word(wordDescribe: "VENEDİK", wordForbidden1: "GONDOL", wordForbidden2: "ÜLKE", wordForbidden3: "SU", wordForbidden4: "İTALYA", wordForbidden5: "YÜZMEK"))
+    wordsArray.append(Word(wordDescribe: "SELÜLİT", wordForbidden1: "BACAK", wordForbidden2: "KADIN", wordForbidden3: "CİLT", wordForbidden4: "YAĞ", wordForbidden5: "PORTAKAL"))
+    wordsArray.append(Word(wordDescribe: "NORM", wordForbidden1: "KURAL", wordForbidden2: "YERLEŞMİŞ", wordForbidden3: "İLKE", wordForbidden4: "YASA", wordForbidden5: "DÜZEN"))
+    wordsArray.append(Word(wordDescribe: "ALT", wordForbidden1: "ÜST", wordForbidden2: "YER", wordForbidden3: "TABAN", wordForbidden4: "DERECE", wordForbidden5: "SINIF"))
+    wordsArray.append(Word(wordDescribe: "ABONE", wordForbidden1: "YONCA EVCİMİK", wordForbidden2: "SATIN ALMAK", wordForbidden3: "ÜYE", wordForbidden4: "DERGİ", wordForbidden5: "GAZETE"))
+    wordsArray.append(Word(wordDescribe: "TEZGAH", wordForbidden1: "KURMAK", wordForbidden2: "MASA", wordForbidden3: "MUTFAK", wordForbidden4: "SATICI", wordForbidden5: "BÜFE"))
+    wordsArray.append(Word(wordDescribe: "TEMAS", wordForbidden1: "FİZİKSEL", wordForbidden2: "DEĞME", wordForbidden3: "DOKUNMA", wordForbidden4: "MÜNASEBET", wordForbidden5: "BULUŞMAK"))
+    wordsArray.append(Word(wordDescribe: "EFSANE", wordForbidden1: "HAYALİ", wordForbidden2: "YARADILIŞ", wordForbidden3: "ÖYKÜ", wordForbidden4: "ABARTMAK", wordForbidden5: "SÖYLENCE"))
+    wordsArray.append(Word(wordDescribe: "İMLA", wordForbidden1: "KURAL", wordForbidden2: "YAZIM", wordForbidden3: "DİL BİLGİSİ", wordForbidden4: "HATA", wordForbidden5: "TERİM"))
+    wordsArray.append(Word(wordDescribe: "SAKAL", wordForbidden1: "KIL", wordForbidden2: "YÜZ", wordForbidden3: "TIRAŞ", wordForbidden4: "KESMEK", wordForbidden5: "TOP"))
+    wordsArray.append(Word(wordDescribe: "LOSYON", wordForbidden1: "TIRAŞ", wordForbidden2: "KOLONYA", wordForbidden3: "PARFÜM", wordForbidden4: "KOKU", wordForbidden5: "BERBER"))
+    wordsArray.append(Word(wordDescribe: "BARBAR", wordForbidden1: "KABA", wordForbidden2: "İLKEL", wordForbidden3: "KIRICI", wordForbidden4: "UYGARLAŞMA", wordForbidden5: "AKIN"))
+    wordsArray.append(Word(wordDescribe: "FABL", wordForbidden1: "MASAL", wordForbidden2: "HAYVAN", wordForbidden3: "HİKAYE", wordForbidden4: "ÖYKÜ", wordForbidden5: "DERS"))
+    wordsArray.append(Word(wordDescribe: "ABDESTHANE", wordForbidden1: "TUVALET", wordForbidden2: "WC", wordForbidden3: "HELA", wordForbidden4: "YÜZNUMARA", wordForbidden5: "ALMAK"))
+    wordsArray.append(Word(wordDescribe: "HAKİ", wordForbidden1: "RENK", wordForbidden2: "YEŞİL", wordForbidden3: "KAHVERENGİ", wordForbidden4: "ÇALMAK", wordForbidden5: "KAÇMAK"))
+    wordsArray.append(Word(wordDescribe: "LATİN AMERİKA", wordForbidden1: "GÜNEY", wordForbidden2: "KITA", wordForbidden3: "BREZİLYA", wordForbidden4: "ÜLKE", wordForbidden5: "ARJANTİN"))
+    wordsArray.append(Word(wordDescribe: "DEFİNE", wordForbidden1: "HARİTA", wordForbidden2: "PARA", wordForbidden3: "ALTIN", wordForbidden4: "ALİ", wordForbidden5: "BABA"))
+    wordsArray.append(Word(wordDescribe: "ARAMAK", wordForbidden1: "SAÇ", wordForbidden2: "ARAŞTIRMAK", wordForbidden3: "DERLEMEK", wordForbidden4: "ATEŞLEMEK", wordForbidden5: "AYIKLAMAK"))
+    wordsArray.append(Word(wordDescribe: "İPUCU", wordForbidden1: "İZ", wordForbidden2: "EMARE", wordForbidden3: "VERMEK", wordForbidden4: "DEDEKTİF", wordForbidden5: "SIR"))
+    wordsArray.append(Word(wordDescribe: "ALTIN", wordForbidden1: "TAKMAK", wordForbidden2: "DEĞERLİ", wordForbidden3: "KUYUMCU", wordForbidden4: "SARRAF", wordForbidden5: "ÇEYREK"))
+    wordsArray.append(Word(wordDescribe: "AÇISAL HIZ", wordForbidden1: "FİZİK", wordForbidden2: "VEKTÖREL", wordForbidden3: "HAREKET", wordForbidden4: "DAİRESEL", wordForbidden5: "TARAMAK"))
+    wordsArray.append(Word(wordDescribe: "SÜZMEK", wordForbidden1: "SU", wordForbidden2: "AYIRMAK", wordForbidden3: "SIVI", wordForbidden4: "MAKARNA", wordForbidden5: "KATI"))
+    wordsArray.append(Word(wordDescribe: "KABAKULAK", wordForbidden1: "HASTALIK", wordForbidden2: "İLTİHAP", wordForbidden3: "ŞİŞMEK", wordForbidden4: "BEZ", wordForbidden5: "TÜKÜRÜK"))
+    wordsArray.append(Word(wordDescribe: "KÜF", wordForbidden1: "EKMEK", wordForbidden2: "YEŞİL", wordForbidden3: "MANTAR", wordForbidden4: "BAKTERİ", wordForbidden5: "KURT"))
+    wordsArray.append(Word(wordDescribe: "ANATOMİ", wordForbidden1: "VÜCUT", wordForbidden2: "SİSTEM", wordForbidden3: "İNCELEMEK", wordForbidden4: "ORGAN", wordForbidden5: "DİŞ"))
+    wordsArray.append(Word(wordDescribe: "KARL MARX", wordForbidden1: "SOSYALİZM", wordForbidden2: "KOMÜNİZM", wordForbidden3: "FELSEFE", wordForbidden4: "MANİFESTO", wordForbidden5: "KAPİTAL"))
+    wordsArray.append(Word(wordDescribe: "ALTERNATİF AKIM", wordForbidden1: "DOĞRU", wordForbidden2: "ELEKTRİK", wordForbidden3: "DEĞİŞKEN", wordForbidden4: "NİKOLA TESLA", wordForbidden5: "SİNÜS"))
+    wordsArray.append(Word(wordDescribe: "FOTOKOPİ", wordForbidden1: "KOPYA", wordForbidden2: "MAKİNE", wordForbidden3: "FAX", wordForbidden4: "TARAMAK", wordForbidden5: "KIRTASİYE"))
+    wordsArray.append(Word(wordDescribe: "BARKOD", wordForbidden1: "ÜRÜN", wordForbidden2: "FİYAT", wordForbidden3: "İMZA", wordForbidden4: "ÇİZGİ", wordForbidden5: "ALT"))
+    wordsArray.append(Word(wordDescribe: "ODAK", wordForbidden1: "OPTİK", wordForbidden2: "IŞIK", wordForbidden3: "KAYNAK", wordForbidden4: "TOPLANMAK", wordForbidden5: "MİHRAK"))
+    wordsArray.append(Word(wordDescribe: "MAKAS", wordForbidden1: "KUMAŞ", wordForbidden2: "KESMEK", wordForbidden3: "KAĞIT", wordForbidden4: "NİŞAN", wordForbidden5: "TERZİ"))
+    wordsArray.append(Word(wordDescribe: "KANTİN", wordForbidden1: "OKUL", wordForbidden2: "TOST", wordForbidden3: "KAFETERYA ", wordForbidden4: "ÖĞRENCİ ", wordForbidden5: "YEMEK"))
+    wordsArray.append(Word(wordDescribe: "İMA ETMEK", wordForbidden1: "ANLAM ", wordForbidden2: "İZ ", wordForbidden3: "DURUM ", wordForbidden4: "DAVRANIŞ ", wordForbidden5: "ALAMET"))
+    wordsArray.append(Word(wordDescribe: "MÜHİMMAT", wordForbidden1: "DEPO ", wordForbidden2: "SAVAŞ ", wordForbidden3: "CEPHANE ", wordForbidden4: "ORDU ", wordForbidden5: "SİLAH"))
+    wordsArray.append(Word(wordDescribe: "HIÇKIRIK", wordForbidden1: "SES ", wordForbidden2: "TUTMAK ", wordForbidden3: "DİYAFRAM ", wordForbidden4: "SU ", wordForbidden5: "NEFES"))
+    wordsArray.append(Word(wordDescribe: "BUZ DEVRİ", wordForbidden1: "ESKİ ÇAĞ", wordForbidden2: "SOĞUK ", wordForbidden3: "ERİMEK ", wordForbidden4: "KAR ", wordForbidden5: "ÇİZGİ FİLM"))
+    wordsArray.append(Word(wordDescribe: "SALSA", wordForbidden1: "SOS ", wordForbidden2: "DANS ", wordForbidden3: "LATİN ", wordForbidden4: "İSPANYOL ", wordForbidden5: "PARTİ"))
+    wordsArray.append(Word(wordDescribe: "BONCUK", wordForbidden1: "KOLYE ", wordForbidden2: "TAKI ", wordForbidden3: "RENKLİ ", wordForbidden4: "KÜÇÜK ", wordForbidden5: "YUVARLAK"))
+    wordsArray.append(Word(wordDescribe: "TRAVESTİ", wordForbidden1: "ERKEK ", wordForbidden2: "KADIN ", wordForbidden3: "TRANSSEKSÜEL ", wordForbidden4: "KILIK ", wordForbidden5: "GİRMEK"))
+    wordsArray.append(Word(wordDescribe: "DAKTİLO", wordForbidden1: "YAZMAK ", wordForbidden2: "HARF ", wordForbidden3: "KAĞIT ", wordForbidden4: "TUŞ ", wordForbidden5: "STİLO"))
+    wordsArray.append(Word(wordDescribe: "TELSİZ", wordForbidden1: "TELEFON ", wordForbidden2: "KONUŞMAK ", wordForbidden3: "POLİS ", wordForbidden4: "İLETİŞİM ", wordForbidden5: "BASMAK"))
+    wordsArray.append(Word(wordDescribe: "SANDAL", wordForbidden1: "MOTOR ", wordForbidden2: "DENİZ ", wordForbidden3: "KÜREK ", wordForbidden4: "SEFA ", wordForbidden5: "BALIKÇI"))
+    wordsArray.append(Word(wordDescribe: "HAÇ", wordForbidden1: "HRİSTİYANLIK", wordForbidden2: "ÇAĞLA ŞİKEL", wordForbidden3: "ARTI İŞARETİ", wordForbidden4: "İSA ", wordForbidden5: "ÇARMIH"))
+    wordsArray.append(Word(wordDescribe: "ASİT", wordForbidden1: "MAVİ ", wordForbidden2: "KIRMIZI ", wordForbidden3: "TURNUSOL ", wordForbidden4: "BAZ ", wordForbidden5: "MİDE"))
+    wordsArray.append(Word(wordDescribe: "KUŞ BAKIŞI", wordForbidden1: "YÜKSEK ", wordForbidden2: "GENEL ", wordForbidden3: "HAYVAN ", wordForbidden4: "GÖRMEK ", wordForbidden5: "ALAN"))
+    wordsArray.append(Word(wordDescribe: "HATIR", wordForbidden1: "GÖNÜL", wordForbidden2: "KALP ", wordForbidden3: "HAFIZA ", wordForbidden4: "ZİHİN", wordForbidden5: "KIRMAK"))
+    wordsArray.append(Word(wordDescribe: "İMRENMEK", wordForbidden1: "KISKANMAK ", wordForbidden2: "GIPTA ETMEK", wordForbidden3: "ÖZENMEK ", wordForbidden4: "CANI ÇEKMEK", wordForbidden5: "İSTEMEK"))
+    wordsArray.append(Word(wordDescribe: "DUMUR", wordForbidden1: "KÖRELMEK ", wordForbidden2: "APTALLAŞMAK ", wordForbidden3: "ŞOK OLMAK ", wordForbidden4: "ŞAŞIRMAK ", wordForbidden5: "ŞAŞKINA DÖNMEK"))
+    wordsArray.append(Word(wordDescribe: "KAHIR", wordForbidden1: "MAHVETME ", wordForbidden2: "PERİŞAN ", wordForbidden3: "EZME ", wordForbidden4: "ÇEKMEK ", wordForbidden5: "ETMEK"))
+    
+    
+    print("yeayyy")
+    print(wordsArray.count)
+    
 }
 /*
  tabooList.add(WordModel("KÖŞK","BAHÇE ","EV ","SÜSLÜ ","KASİR ","YAPI"))
