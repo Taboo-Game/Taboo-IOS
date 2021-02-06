@@ -913,6 +913,7 @@ Oyuncular kelimelerinizle oynasın</string>
                         <outlet property="forbidden5" destination="kaP-E6-T9u" id="rpP-UR-M88"/>
                         <outlet property="nextButton" destination="Vpm-cW-bEc" id="ne7-pU-uGe"/>
                         <outlet property="secondTeamScore" destination="pIn-GO-TVC" id="732-pp-ehG"/>
+                        <outlet property="timerTableLbl" destination="lSX-zT-ODz" id="lJV-YP-0hT"/>
                         <outlet property="wordDesc" destination="1PZ-Be-gK5" id="knN-7g-Ase"/>
                     </connections>
                 </viewController>
