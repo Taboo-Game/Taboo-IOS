@@ -31,13 +31,18 @@ class PlayGameViewController: UIViewController {
     
     var takimchange = true
     // timer
-    var runCount = 10
+    var runCount = selectedTime
+    var pasLimitCount = skipNumber
+    
+    @IBOutlet weak var passButton: UIButton!
+    
     
     @IBOutlet weak var circleView: UIView!
     @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var nextButton: UIButton!
     
     
+    @IBOutlet weak var passCountLbl: UILabel!
     @IBOutlet weak var wordDesc: UILabel!
     
     @IBOutlet weak var forbidden1: UILabel!
@@ -90,8 +95,20 @@ class PlayGameViewController: UIViewController {
     }
     @IBAction func passClicked(_ sender: Any) {
         
-        passCount += 1
-        randomQuestion()
+        if passCount < pasLimitCount
+        {
+            
+            passCount += 1
+            passCountLbl.text = "\(passCount)/ \(pasLimitCount)"
+            
+            randomQuestion()
+        }
+        else
+        {
+            passButton.isEnabled = false
+        }
+        
+       
   
     }
     @IBAction func falseClicked(_ sender: Any) {
@@ -144,6 +161,9 @@ class PlayGameViewController: UIViewController {
                 else {
                     self.takimchange = true
                 }
+                self.passCount = 0
+                self.passButton.isEnabled = true
+                self.passCountLbl.text = "\(self.passCount)/ \(self.pasLimitCount)"
                 print("burda bi gariplik var")
                 self.randomQuestionWithTimer()
                 print("random cagirildi ")
@@ -194,6 +214,8 @@ class PlayGameViewController: UIViewController {
             secondTeamScore.text = "\(player2trueCount-player2falseCount)"
         }
     }
+    
+    
     
     
 }
