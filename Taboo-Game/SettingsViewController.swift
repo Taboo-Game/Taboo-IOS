@@ -7,6 +7,12 @@
 
 import UIKit
 
+var skipNumber = 3
+var selectedTime = 15
+var selectedDrawTime = 15
+var winPoint = 15
+
+
 class SettingsViewController: UIViewController {
 
     @IBOutlet weak var skipLabel: UILabel!
@@ -41,15 +47,17 @@ class SettingsViewController: UIViewController {
         let currentValue = Int((sender.value))
         let temp : Double = (0.5) + Double(currentValue)
         skipSlider.setValue(Float(temp), animated: true)
-        skipLabel.text = "\(currentValue)"
+        skipNumber = Int(temp)
+        skipLabel.text = "\(temp)"
     }
     
     @IBAction func timeChanged(_ sender: UISlider) {
         let currentValue = Int((sender.value))
         let temp : Double = (0.5) + Double(currentValue)
         timeSLider.setValue(Float(temp), animated: true)
+        selectedTime =  Int(temp)
         
-        timeLabel.text = "\(currentValue)"
+        timeLabel.text = "\(temp)"
     }
     
     
@@ -57,14 +65,16 @@ class SettingsViewController: UIViewController {
         let currentValue = Int((sender.value))
         let temp : Double = (0.5) + Double(currentValue)
         drawTimeSlider.setValue(Float(temp), animated: true)
-        drawTime.text = "\(currentValue)"
+        selectedDrawTime = Int(temp)
+        drawTime.text = "\(temp)"
     }
     
     @IBAction func winSocreChange(_ sender: UISlider) {
         let currentValue = Int((sender.value))
         let temp : Double = (0.5) + Double(currentValue)
         scoreSlider.setValue(Float(temp), animated: true)
-        winScoreLabel.text = "\(currentValue)"
+        winPoint = Int(temp)
+        winScoreLabel.text = "\(temp)"
     }
     
     @IBAction func myWordsClicked(_ sender: Any) {
