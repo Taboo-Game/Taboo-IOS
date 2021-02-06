@@ -6,8 +6,17 @@
 //
 
 import Foundation
+import UIKit
+import CoreData
 
 var wordsArray : [Word] = []
+var myWordDescribe : [String] = []
+var myWordForbidden1 : [String] = []
+var myWordForbidden2 : [String] = []
+var myWordForbidden3 : [String] = []
+var myWordForbidden4 : [String] = []
+var myWordForbidden5 : [String] = []
+
 
 class Word{
     
@@ -35,6 +44,41 @@ class Word{
         
     }
    
+}
+func getData(){
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    let context = appDelegate.persistentContainer.viewContext
+            
+    let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Words")
+    fetchRequest.returnsObjectsAsFaults = false
+            
+    do {
+        let results = try context.fetch(fetchRequest)
+        if results.count > 0 {
+            for result in results as! [NSManagedObject] {
+                if let wDescribe = result.value(forKey: "wordDescribe") as? String {
+                    myWordDescribe.append(wDescribe)
+                }
+                if let wForbidden = result.value(forKey: "wordForbidden1") as? String {
+                    myWordForbidden1.append(wForbidden)
+                }
+                if let wForbidden = result.value(forKey: "wordForbidden2") as? String {
+                    myWordForbidden2.append(wForbidden)
+                }
+                if let wForbidden = result.value(forKey: "wordForbidden3") as? String {
+                    myWordForbidden3.append(wForbidden)
+                }
+                if let wForbidden = result.value(forKey: "wordForbidden4") as? String {
+                    myWordForbidden4.append(wForbidden)
+                }
+                if let wForbidden = result.value(forKey: "wordForbidden5") as? String {
+                    myWordForbidden5.append(wForbidden)
+                }
+            }
+        }
+    } catch {
+        print("error")
+    }
 }
 
 func wordLists ()

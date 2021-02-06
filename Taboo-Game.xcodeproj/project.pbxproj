@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		219B072C25CE100600B28D8E /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 219B072A25CE100600B28D8E /* Model.xcdatamodeld */; };
 		219BD32125C954D0001E72C1 /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = 219BD32025C954D0001E72C1 /* Word.swift */; };
 		219BD32425C95553001E72C1 /* PlayGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 219BD32325C95553001E72C1 /* PlayGameViewController.swift */; };
 		219BD32725C9558B001E72C1 /* ResultScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 219BD32625C9558B001E72C1 /* ResultScreenViewController.swift */; };
@@ -28,6 +29,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		219B072B25CE100600B28D8E /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		219BD32025C954D0001E72C1 /* Word.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Word.swift; sourceTree = "<group>"; };
 		219BD32325C95553001E72C1 /* PlayGameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayGameViewController.swift; sourceTree = "<group>"; };
 		219BD32625C9558B001E72C1 /* ResultScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultScreenViewController.swift; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 		21A7ADC525B721FA00EC13A1 /* Taboo-Game */ = {
 			isa = PBXGroup;
 			children = (
+				219B072A25CE100600B28D8E /* Model.xcdatamodeld */,
 				21A7ADC625B721FA00EC13A1 /* AppDelegate.swift */,
 				21A7ADC825B721FA00EC13A1 /* SceneDelegate.swift */,
 				219BD32925C955C8001E72C1 /* SettingsViewController.swift */,
@@ -187,6 +190,7 @@
 				21A7ADC725B721FA00EC13A1 /* AppDelegate.swift in Sources */,
 				21A7ADE325B73AA200EC13A1 /* TeamsViewController.swift in Sources */,
 				21A7ADC925B721FA00EC13A1 /* SceneDelegate.swift in Sources */,
+				219B072C25CE100600B28D8E /* Model.xcdatamodeld in Sources */,
 				219BD32A25C955C8001E72C1 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -389,6 +393,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		219B072A25CE100600B28D8E /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				219B072B25CE100600B28D8E /* Model.xcdatamodel */,
+			);
+			currentVersion = 219B072B25CE100600B28D8E /* Model.xcdatamodel */;
+			name = Model.xcdatamodeld;
+			path = ../Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 21A7ADBB25B721FA00EC13A1 /* Project object */;
 }

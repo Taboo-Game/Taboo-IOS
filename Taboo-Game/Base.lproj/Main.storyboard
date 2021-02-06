@@ -295,6 +295,23 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LNH-Hp-ZjJ">
+                                        <rect key="frame" x="164" y="344" width="63" height="28"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                        <state key="normal" title="kelimeEkle"/>
+                                        <connections>
+                                            <action selector="addWordClicked:" destination="Ext-Ve-8Du" eventType="touchUpInside" id="mPJ-YF-YFR"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hQ1-PR-sJC">
+                                        <rect key="frame" x="71" y="344" width="70" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="kelimelrim"/>
+                                        <connections>
+                                            <action selector="myWordsClicked:" destination="Ext-Ve-8Du" eventType="touchUpInside" id="Cxa-L9-jDG"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.44833618510000001" blue="0.49799131769999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
@@ -522,6 +539,9 @@
                                         <state key="normal" title="Ekle">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="addWordButttonClicked:" destination="cbZ-JV-bDC" eventType="touchUpInside" id="2AH-IA-5YX"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5mc-yk-0ry">
                                         <rect key="frame" x="127" y="52" width="60" height="60"/>
@@ -555,7 +575,7 @@ Oyuncular kelimelerinizle oynasın</string>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Anlatılacak Kelime" borderStyle="roundedRect" placeholder="Anlatılacak Kelime" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0qM-wl-QOu">
+                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Anlatılacak Kelime" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0qM-wl-QOu">
                                         <rect key="frame" x="18" y="98" width="265" height="34"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="1" green="0.44833618510000001" blue="0.49799131769999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -563,7 +583,7 @@ Oyuncular kelimelerinizle oynasın</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Yasaklı Kelime 1" borderStyle="roundedRect" placeholder="Anlatılacak Kelime" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VXw-Bf-BG1">
+                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Yasaklı Kelime 1" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VXw-Bf-BG1">
                                         <rect key="frame" x="18" y="149" width="265" height="34"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="1" green="0.44833618510000001" blue="0.49799131769999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -571,7 +591,7 @@ Oyuncular kelimelerinizle oynasın</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Yasaklı Kelime 2" borderStyle="roundedRect" placeholder="Anlatılacak Kelime" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1wr-r3-w9M">
+                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Yasaklı Kelime 2" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1wr-r3-w9M">
                                         <rect key="frame" x="18" y="206" width="265" height="34"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="1" green="0.44833618510000001" blue="0.49799131769999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -579,7 +599,7 @@ Oyuncular kelimelerinizle oynasın</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Yasaklı Kelime 3" borderStyle="roundedRect" placeholder="Anlatılacak Kelime" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6eQ-eh-uHc">
+                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Yasaklı Kelime 3" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6eQ-eh-uHc">
                                         <rect key="frame" x="18" y="256" width="265" height="34"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="1" green="0.44833618510000001" blue="0.49799131769999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -587,7 +607,7 @@ Oyuncular kelimelerinizle oynasın</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Yasaklı Kelime 5" borderStyle="roundedRect" placeholder="Anlatılacak Kelime" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LZ3-JR-yd6">
+                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Yasaklı Kelime 5" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LZ3-JR-yd6">
                                         <rect key="frame" x="18" y="373" width="265" height="34"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="1" green="0.44833618510000001" blue="0.49799131769999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -595,7 +615,7 @@ Oyuncular kelimelerinizle oynasın</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Yasaklı Kelime 4" borderStyle="roundedRect" placeholder="Anlatılacak Kelime" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wk7-gE-HHw">
+                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Yasaklı Kelime 4" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wk7-gE-HHw">
                                         <rect key="frame" x="18" y="312" width="265" height="34"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="1" green="0.44833618510000001" blue="0.49799131769999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -610,6 +630,14 @@ Oyuncular kelimelerinizle oynasın</string>
                         <viewLayoutGuide key="safeArea" id="dAs-4a-H9b"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <outlet property="describeWordText" destination="0qM-wl-QOu" id="1PJ-tW-UJX"/>
+                        <outlet property="forbiddenWord1Text" destination="VXw-Bf-BG1" id="NEz-dO-Hdn"/>
+                        <outlet property="forbiddenWord2Text" destination="1wr-r3-w9M" id="Mhc-05-prf"/>
+                        <outlet property="forbiddenWord3Text" destination="6eQ-eh-uHc" id="P8K-cI-Dod"/>
+                        <outlet property="forbiddenWord4Text" destination="wk7-gE-HHw" id="Vfx-ra-eza"/>
+                        <outlet property="forbiddenWord5Text" destination="LZ3-JR-yd6" id="Sfy-lI-jgT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Pp-UG-8mN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
