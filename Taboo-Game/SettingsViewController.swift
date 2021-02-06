@@ -67,6 +67,15 @@ class SettingsViewController: UIViewController {
         winScoreLabel.text = "\(currentValue)"
     }
     
+    @IBAction func myWordsClicked(_ sender: Any) {
+        performSegue(withIdentifier: "toMyWords", sender: nil)
+    }
+    
+    @IBAction func addWordClicked(_ sender: Any) {
+        performSegue(withIdentifier: "toAddWord", sender: nil)
+    }
+    
+    
     /*
     // MARK: - Navigation
 
