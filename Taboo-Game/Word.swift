@@ -45,7 +45,7 @@ class Word{
     }
    
 }
-func getData(){
+func getDataFromCore(){
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     let context = appDelegate.persistentContainer.viewContext
             
@@ -58,6 +58,7 @@ func getData(){
             for result in results as! [NSManagedObject] {
                 if let wDescribe = result.value(forKey: "wordDescribe") as? String {
                     myWordDescribe.append(wDescribe)
+                    print(wDescribe)
                 }
                 if let wForbidden = result.value(forKey: "wordForbidden1") as? String {
                     myWordForbidden1.append(wForbidden)

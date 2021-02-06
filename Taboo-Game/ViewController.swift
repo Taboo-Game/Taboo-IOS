@@ -21,6 +21,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         wordLists()
+        getDataFromCore()
+//        print(myWordDescribe[0])
         classicGame.layer.cornerRadius = classicGame.frame.height/4
         drawGame.layer.cornerRadius = drawGame.frame.height/4
         settings.layer.cornerRadius = settings.frame.height/4
