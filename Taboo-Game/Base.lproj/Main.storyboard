@@ -909,6 +909,14 @@ Oyuncular kelimelerinizle oynasın</string>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pjo-Gp-UM1">
+                                        <rect key="frame" x="153" y="343" width="33" height="16"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="shadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.44833618510000001" blue="0.49799131769999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </view>
@@ -940,6 +948,8 @@ Oyuncular kelimelerinizle oynasın</string>
                         <outlet property="forbidden4" destination="xDQ-Zt-Sqc" id="PLT-WL-dRD"/>
                         <outlet property="forbidden5" destination="kaP-E6-T9u" id="rpP-UR-M88"/>
                         <outlet property="nextButton" destination="Vpm-cW-bEc" id="ne7-pU-uGe"/>
+                        <outlet property="passButton" destination="ZSA-eL-UvQ" id="bxA-KO-2wx"/>
+                        <outlet property="passCountLbl" destination="pjo-Gp-UM1" id="VvE-BY-olF"/>
                         <outlet property="secondTeamScore" destination="pIn-GO-TVC" id="732-pp-ehG"/>
                         <outlet property="timerTableLbl" destination="lSX-zT-ODz" id="lJV-YP-0hT"/>
                         <outlet property="wordDesc" destination="1PZ-Be-gK5" id="knN-7g-Ase"/>
