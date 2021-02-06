@@ -34,6 +34,10 @@ class AddWordViewController: UIViewController {
             view.endEditing(true)
         }
     
+    
+    @IBAction func settingsButtonClicked(_ sender: Any) {
+        performSegue(withIdentifier: "addToSettings", sender: nil)
+    }
     @IBAction func addWordButttonClicked(_ sender: Any) {
         if (describeWordText.text == "") || (forbiddenWord1Text.text == "") || (forbiddenWord2Text.text == "") || (forbiddenWord3Text.text == "") || (forbiddenWord4Text.text == "") || (forbiddenWord5Text.text == "") {
             print("hepsini doldur canimmm")
@@ -82,7 +86,15 @@ class AddWordViewController: UIViewController {
             } catch {
                 print("error")
             }
+            do {
+                try context.save()
+                print("success")
+            }
+            catch {
+                print("error")
+            }
         }
+        
     }
     
     /*

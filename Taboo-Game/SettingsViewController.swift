@@ -47,17 +47,17 @@ class SettingsViewController: UIViewController {
         let currentValue = Int((sender.value))
         let temp : Double = (0.5) + Double(currentValue)
         skipSlider.setValue(Float(temp), animated: true)
-        skipNumber = Int(temp)
-        skipLabel.text = "\(temp)"
+        skipNumber = Int(currentValue)
+        skipLabel.text = "\(currentValue)"
     }
     
     @IBAction func timeChanged(_ sender: UISlider) {
         let currentValue = Int((sender.value))
         let temp : Double = (0.5) + Double(currentValue)
         timeSLider.setValue(Float(temp), animated: true)
-        selectedTime =  Int(temp)
+        selectedTime =  Int(currentValue)
         
-        timeLabel.text = "\(temp)"
+        timeLabel.text = "\(currentValue)"
     }
     
     
@@ -65,16 +65,16 @@ class SettingsViewController: UIViewController {
         let currentValue = Int((sender.value))
         let temp : Double = (0.5) + Double(currentValue)
         drawTimeSlider.setValue(Float(temp), animated: true)
-        selectedDrawTime = Int(temp)
-        drawTime.text = "\(temp)"
+        selectedDrawTime = Int(currentValue)
+        drawTime.text = "\(currentValue)"
     }
     
     @IBAction func winSocreChange(_ sender: UISlider) {
         let currentValue = Int((sender.value))
         let temp : Double = (0.5) + Double(currentValue)
         scoreSlider.setValue(Float(temp), animated: true)
-        winPoint = Int(temp)
-        winScoreLabel.text = "\(temp)"
+        winPoint = Int(currentValue)
+        winScoreLabel.text = "\(currentValue)"
     }
     
     @IBAction func myWordsClicked(_ sender: Any) {
