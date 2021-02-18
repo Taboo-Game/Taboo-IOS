@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import NXDrawKit
+
 
 
 var teamOneScore = 0
@@ -13,6 +15,21 @@ var teamTwoScore = 0
 
 
 class PlayGameViewController: UIViewController {
+    
+    
+    
+    /////
+    
+    // play view style telling properties
+    weak var canvasView: Canvas?
+    weak var paletteView: Palette?
+   
+    
+    @IBOutlet weak var tabooCardView: UIView!
+    
+    
+    
+    ////////////
     
     var word: Word?
     
@@ -36,6 +53,7 @@ class PlayGameViewController: UIViewController {
     
     @IBOutlet weak var passButton: UIButton!
     
+    @IBOutlet weak var drawingDelete: UIButton!
     
     @IBOutlet weak var circleView: UIView!
     @IBOutlet weak var backButton: UIButton!
@@ -62,11 +80,11 @@ class PlayGameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        
         circleView.layer.cornerRadius = circleView.frame.height/2
         backButton.layer.cornerRadius = backButton.frame.height/2
         nextButton.layer.cornerRadius = nextButton.frame.height/2
-        
-        
         
         word = wordsArray.randomElement()
         wordDesc.text = word?.wordDescribe
@@ -76,6 +94,25 @@ class PlayGameViewController: UIViewController {
         forbidden3.text = word?.wordForbidden3
         forbidden4.text = word?.wordForbidden4
         forbidden5.text = word?.wordForbidden5
+        
+        
+        
+        switch style {
+        case .drawing:
+            print("ben cizim ekrani ")
+            tabooCardView.isHidden = true
+            drawingDelete.isHidden = false
+            self.initialize()
+            
+        case .telling:
+            print("ben anlatma ekrani ")
+            drawingDelete.isHidden = true
+            
+       
+        }
+        
+        
+       
 
         
         timerCount(runTimerCount: runCount)
@@ -83,8 +120,35 @@ class PlayGameViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    override func viewWillLayoutSubviews() {
+        let topMargin = UIApplication.shared.topSafeAreaMargin() + 140
+        let leftMargin = UIApplication.shared.leftSafeAreaMargin() + 20
+        let rightMargin = UIApplication.shared.rightSafeAreaMargin() + 20
+        let bottomMargin = UIApplication.shared.bottomSafeAreaMargin()
+        let width = view.frame.width
+       // let height = view.frame.height
 
+        self.canvasView?.frame = CGRect(x: leftMargin,
+                                        y: topMargin,
+                                        width: width - (leftMargin + rightMargin),
+                                        height: width + 30 - (leftMargin + rightMargin))
+
+
+       // self.toolBar?.frame = CGRect(x: 0, y: (Int(view.frame.height - bottomMargin - 20) )  , width: Int(view.frame.width), height: Int(bottomMargin) )
+      
+    }
     
+    private func initialize() {
+        self.setupCanvas()   // cizim ekranini getiriyot
+        //self.setupPalette()   // renk paneli ve tuslari getiriyor
+        //self.setupToolBar()   // tuslari getiriyor
+    }
+
+     
+    @IBAction func drawingDelete(_ sender: Any) {
+        
+        self.canvasView?.clear()
+    }
     
     
     @IBAction func trueClicked(_ sender: Any) {
@@ -140,7 +204,16 @@ class PlayGameViewController: UIViewController {
             player2falseCount += +1
         }
     }
-    
+    private func setupCanvas() {
+        let canvasView = Canvas()
+        canvasView.delegate = self
+        canvasView.layer.borderColor = UIColor(red: 0.22, green: 0.22, blue: 0.22, alpha: 0.8).cgColor
+        canvasView.layer.borderWidth = 2.0
+        canvasView.layer.cornerRadius = 5.0
+        canvasView.clipsToBounds = true
+        self.view.addSubview(canvasView)
+        self.canvasView = canvasView
+    }
     
     func timerCount( runTimerCount : Int ){
         var timerCount = runTimerCount
@@ -214,8 +287,52 @@ class PlayGameViewController: UIViewController {
             secondTeamScore.text = "\(player2trueCount-player2falseCount)"
         }
     }
+   
     
+}
+extension PlayGameViewController: CanvasDelegate {
+    func brush() -> Brush? {
+    return self.paletteView?.currentBrush()
+    }
+}
+extension UIApplication {
+    public func topSafeAreaMargin() -> CGFloat {
+        var topMargin: CGFloat = 0
+        if #available(iOS 11.0, *), let topInset = keyWindow?.safeAreaInsets.top {
+            topMargin = topInset
+        }
+        
+        return topMargin
+    }
     
+    public func bottomSafeAreaMargin() -> CGFloat {
+        var bottomMargin: CGFloat = 0
+        if #available(iOS 11.0, *), let bottomInset = keyWindow?.safeAreaInsets.bottom {
+            bottomMargin = bottomInset
+        }
+        
+        return bottomMargin
+    }
     
+    public func leftSafeAreaMargin() -> CGFloat {
+        var leftMargin: CGFloat = 0
+        if #available(iOS 11.0, *), let leftInset = keyWindow?.safeAreaInsets.left {
+            leftMargin = leftInset
+        }
+        
+        return leftMargin
+    }
     
+    public func rightSafeAreaMargin() -> CGFloat {
+        var rightMargin: CGFloat = 0
+        if #available(iOS 11.0, *), let rightInset = keyWindow?.safeAreaInsets.right {
+            rightMargin = rightInset
+        }
+        
+        return rightMargin
+    }
+    
+    public func safeAreaSideMargin() -> CGFloat {
+        return leftSafeAreaMargin() + rightSafeAreaMargin()
+    }
 }

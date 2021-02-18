@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		138E053625DDCA74001ED9F6 /* TabooStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138E053525DDCA74001ED9F6 /* TabooStyle.swift */; };
 		219B072C25CE100600B28D8E /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 219B072A25CE100600B28D8E /* Model.xcdatamodeld */; };
 		219BD32125C954D0001E72C1 /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = 219BD32025C954D0001E72C1 /* Word.swift */; };
 		219BD32425C95553001E72C1 /* PlayGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 219BD32325C95553001E72C1 /* PlayGameViewController.swift */; };
@@ -25,14 +26,16 @@
 		21A7ADEC25B791DD00EC13A1 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A7ADEB25B791DD00EC13A1 /* SettingsViewController.swift */; };
 		21A7ADF325B7ACB000EC13A1 /* MyWordsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A7ADF225B7ACB000EC13A1 /* MyWordsViewController.swift */; };
 		21A7ADF625B7ACCF00EC13A1 /* AddWordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A7ADF525B7ACCF00EC13A1 /* AddWordViewController.swift */; };
+		81ACB10E1A9075BAEAE8AD89 /* Pods_Taboo_Game.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7031883E034C34D22BFC192 /* Pods_Taboo_Game.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		138E053525DDCA74001ED9F6 /* TabooStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabooStyle.swift; sourceTree = "<group>"; };
 		219B072B25CE100600B28D8E /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		219BD32025C954D0001E72C1 /* Word.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Word.swift; sourceTree = "<group>"; };
 		219BD32325C95553001E72C1 /* PlayGameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayGameViewController.swift; sourceTree = "<group>"; };
 		219BD32625C9558B001E72C1 /* ResultScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultScreenViewController.swift; sourceTree = "<group>"; };
-		21A7ADC325B721FA00EC13A1 /* Taboo-Game.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Taboo-Game.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		21A7ADC325B721FA00EC13A1 /* Taboo-Game.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = "Taboo-Game.app"; path = "/Users/huseyingulecen/Desktop/Taboo-IOS/build/Debug-iphoneos/Taboo-Game.app"; sourceTree = "<absolute>"; };
 		21A7ADC625B721FA00EC13A1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		21A7ADC825B721FA00EC13A1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		21A7ADCA25B721FA00EC13A1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -48,6 +51,9 @@
 		21A7ADEB25B791DD00EC13A1 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		21A7ADF225B7ACB000EC13A1 /* MyWordsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWordsViewController.swift; sourceTree = "<group>"; };
 		21A7ADF525B7ACCF00EC13A1 /* AddWordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWordViewController.swift; sourceTree = "<group>"; };
+		372650426E93E582053EA9DC /* Pods-Taboo-Game.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Taboo-Game.debug.xcconfig"; path = "Target Support Files/Pods-Taboo-Game/Pods-Taboo-Game.debug.xcconfig"; sourceTree = "<group>"; };
+		B08CEFB17AA73341525D7530 /* Pods-Taboo-Game.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Taboo-Game.release.xcconfig"; path = "Target Support Files/Pods-Taboo-Game/Pods-Taboo-Game.release.xcconfig"; sourceTree = "<group>"; };
+		E7031883E034C34D22BFC192 /* Pods_Taboo_Game.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Taboo_Game.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81ACB10E1A9075BAEAE8AD89 /* Pods_Taboo_Game.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,16 +72,9 @@
 			isa = PBXGroup;
 			children = (
 				21A7ADC525B721FA00EC13A1 /* Taboo-Game */,
-				21A7ADC425B721FA00EC13A1 /* Products */,
+				582ED2B5591F210292A52380 /* Pods */,
+				CF895DAA8F1BDBCBC2E860BC /* Frameworks */,
 			);
-			sourceTree = "<group>";
-		};
-		21A7ADC425B721FA00EC13A1 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				21A7ADC325B721FA00EC13A1 /* Taboo-Game.app */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		21A7ADC525B721FA00EC13A1 /* Taboo-Game */ = {
@@ -84,6 +84,7 @@
 				21A7ADC625B721FA00EC13A1 /* AppDelegate.swift */,
 				21A7ADC825B721FA00EC13A1 /* SceneDelegate.swift */,
 				21A7ADCA25B721FA00EC13A1 /* ViewController.swift */,
+				138E053525DDCA74001ED9F6 /* TabooStyle.swift */,
 				21A7ADE225B73AA200EC13A1 /* TeamsViewController.swift */,
 				21A7ADDF25B73A9300EC13A1 /* FirstScreenViewController.swift */,
 				21A7ADEB25B791DD00EC13A1 /* SettingsViewController.swift */,
@@ -103,6 +104,24 @@
 			path = "Taboo-Game";
 			sourceTree = "<group>";
 		};
+		582ED2B5591F210292A52380 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				372650426E93E582053EA9DC /* Pods-Taboo-Game.debug.xcconfig */,
+				B08CEFB17AA73341525D7530 /* Pods-Taboo-Game.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		CF895DAA8F1BDBCBC2E860BC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E7031883E034C34D22BFC192 /* Pods_Taboo_Game.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -110,9 +129,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 21A7ADD725B721FC00EC13A1 /* Build configuration list for PBXNativeTarget "Taboo-Game" */;
 			buildPhases = (
+				930243DF487A851784B3FFE7 /* [CP] Check Pods Manifest.lock */,
 				21A7ADBF25B721FA00EC13A1 /* Sources */,
 				21A7ADC025B721FA00EC13A1 /* Frameworks */,
 				21A7ADC125B721FA00EC13A1 /* Resources */,
+				4316BF905A9E41C3C6077F83 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -146,7 +167,7 @@
 				Base,
 			);
 			mainGroup = 21A7ADBA25B721FA00EC13A1;
-			productRefGroup = 21A7ADC425B721FA00EC13A1 /* Products */;
+			productRefGroup = 21A7ADBA25B721FA00EC13A1;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -171,6 +192,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4316BF905A9E41C3C6077F83 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Taboo-Game/Pods-Taboo-Game-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Taboo-Game/Pods-Taboo-Game-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Taboo-Game/Pods-Taboo-Game-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		930243DF487A851784B3FFE7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Taboo-Game-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		21A7ADBF25B721FA00EC13A1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -183,6 +246,7 @@
 				219BD32125C954D0001E72C1 /* Word.swift in Sources */,
 				21A7ADF625B7ACCF00EC13A1 /* AddWordViewController.swift in Sources */,
 				21A7ADF325B7ACB000EC13A1 /* MyWordsViewController.swift in Sources */,
+				138E053625DDCA74001ED9F6 /* TabooStyle.swift in Sources */,
 				21A7ADE025B73A9300EC13A1 /* FirstScreenViewController.swift in Sources */,
 				21A7ADC725B721FA00EC13A1 /* AppDelegate.swift in Sources */,
 				21A7ADE325B73AA200EC13A1 /* TeamsViewController.swift in Sources */,
@@ -331,6 +395,7 @@
 		};
 		21A7ADD825B721FC00EC13A1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 372650426E93E582053EA9DC /* Pods-Taboo-Game.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -350,6 +415,7 @@
 		};
 		21A7ADD925B721FC00EC13A1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B08CEFB17AA73341525D7530 /* Pods-Taboo-Game.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

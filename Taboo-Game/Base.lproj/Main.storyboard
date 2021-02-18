@@ -934,6 +934,15 @@ Oyuncular kelimelerinizle oynasın</string>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SSK-pu-DNh">
+                                <rect key="frame" x="66" y="82" width="74" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" systemColor="labelColor"/>
+                                <state key="normal" title="Button" image="trash" catalog="system"/>
+                                <connections>
+                                    <action selector="drawingDelete:" destination="0oV-5W-TJm" eventType="touchUpInside" id="hpx-HV-WgS"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="GbB-0v-qqJ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -941,6 +950,7 @@ Oyuncular kelimelerinizle oynasın</string>
                     <connections>
                         <outlet property="backButton" destination="BzH-47-f3J" id="wC3-ny-zxV"/>
                         <outlet property="circleView" destination="wF8-YT-veM" id="EHk-SZ-gUh"/>
+                        <outlet property="drawingDelete" destination="SSK-pu-DNh" id="nID-8M-6sz"/>
                         <outlet property="firsTeamScore" destination="3q1-1w-9HO" id="3Qm-GC-8KQ"/>
                         <outlet property="forbidden1" destination="cBO-vl-hMC" id="cOV-2B-NUB"/>
                         <outlet property="forbidden2" destination="bNQ-jY-aSz" id="Ypu-4U-Lhi"/>
@@ -951,6 +961,7 @@ Oyuncular kelimelerinizle oynasın</string>
                         <outlet property="passButton" destination="ZSA-eL-UvQ" id="bxA-KO-2wx"/>
                         <outlet property="passCountLbl" destination="pjo-Gp-UM1" id="VvE-BY-olF"/>
                         <outlet property="secondTeamScore" destination="pIn-GO-TVC" id="732-pp-ehG"/>
+                        <outlet property="tabooCardView" destination="jFE-ih-7Wm" id="0ac-be-Wbl"/>
                         <outlet property="timerTableLbl" destination="lSX-zT-ODz" id="lJV-YP-0hT"/>
                         <outlet property="wordDesc" destination="1PZ-Be-gK5" id="knN-7g-Ase"/>
                     </connections>
@@ -1009,12 +1020,16 @@ Oyuncular kelimelerinizle oynasın</string>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Yl1-xO-m30"/>
+        <segue reference="6Zy-b3-yWK"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="bob" width="600" height="552"/>
         <image name="snow" catalog="system" width="121" height="128"/>
+        <image name="trash" catalog="system" width="121" height="128"/>
         <image name="worlds" width="356" height="110"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

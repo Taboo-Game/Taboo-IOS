@@ -7,6 +7,7 @@
 
 import UIKit
 
+var style : TabooStyle = .drawing
 class ViewController: UIViewController {
 
     
@@ -34,10 +35,12 @@ class ViewController: UIViewController {
     
     
     @IBAction func classicGameClicked(_ sender: Any) {
+        style = TabooStyle.telling
         performSegue(withIdentifier: "toTeams", sender: nil)
     }
     
     @IBAction func drawGameClicked(_ sender: Any) {
+        style = TabooStyle.drawing
         performSegue(withIdentifier: "toTeams", sender: nil)
     }
     
