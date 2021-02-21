@@ -86,6 +86,8 @@ class PlayGameViewController: UIViewController {
         backButton.layer.cornerRadius = backButton.frame.height/2
         nextButton.layer.cornerRadius = nextButton.frame.height/2
         
+        self.passCountLbl.text = "\(self.passCount)/ \(self.pasLimitCount)"
+        
         word = wordsArray.randomElement()
         wordDesc.text = word?.wordDescribe
         wordDesc.textColor = UIColor.blue
@@ -138,6 +140,19 @@ class PlayGameViewController: UIViewController {
       
     }
     
+    private func alertTelling(){
+        
+        let alert = UIAlertController(title: "Diğer takım hazır mı ?", message: "It's recommended you bring your towel before continuing.", preferredStyle: .alert)
+
+        alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: nil))
+        //alert.addAction(UIAlertAction(title: "No", style: .cancel, handler: nil))
+        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: {(action:UIAlertAction!) in
+            self.randomQuestionWithTimer()
+           }))
+        self.present(alert, animated: true)
+       
+    }
+    
     private func initialize() {
         self.setupCanvas()   // cizim ekranini getiriyot
         //self.setupPalette()   // renk paneli ve tuslari getiriyor
@@ -177,8 +192,8 @@ class PlayGameViewController: UIViewController {
     }
     @IBAction func falseClicked(_ sender: Any) {
         
-        player1falseCount += +1
-        
+        //player1falseCount += +1
+        takimCheckFalse()
         randomQuestion()
     }
     func takimCheckTrue ()
@@ -216,7 +231,9 @@ class PlayGameViewController: UIViewController {
     }
     
     func timerCount( runTimerCount : Int ){
+        
         var timerCount = runTimerCount
+        self.timerTableLbl.text = "\(timerCount)"
         Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { timer in
             print("Timer fired!")
             timerCount += -1
@@ -224,6 +241,7 @@ class PlayGameViewController: UIViewController {
             self.timerTableLbl.text = "\(timerCount)"
 
             if timerCount == 0 {
+                self.alertTelling()
                 timer.invalidate()
                 
                 if self.takimchange
@@ -237,16 +255,16 @@ class PlayGameViewController: UIViewController {
                 self.passCount = 0
                 self.passButton.isEnabled = true
                 self.passCountLbl.text = "\(self.passCount)/ \(self.pasLimitCount)"
-                print("burda bi gariplik var")
-                self.randomQuestionWithTimer()
-                print("random cagirildi ")
+                //print("burda bi gariplik var")
+                //self.randomQuestionWithTimer()  // bu satirda timer ve soru yenileniyor bu islemi hazir buttonun icine koymak lazim
+                //print("random cagirildi ")
             
             }
         }
     }
     func randomQuestion ()
     {
-        
+       /// print("burda b' random ifade")
         word = wordsArray.randomElement()
         wordDesc.text = word?.wordDescribe
         wordDesc.textColor = UIColor.blue
@@ -268,7 +286,8 @@ class PlayGameViewController: UIViewController {
     }
     func randomQuestionWithTimer ()
     {
-        timerCount(runTimerCount: runCount+1)
+        print("neden beklersin yaa timer")
+       timerCount(runTimerCount: runCount)
         word = wordsArray.randomElement()
         wordDesc.text = word?.wordDescribe
         wordDesc.textColor = UIColor.blue
@@ -277,6 +296,7 @@ class PlayGameViewController: UIViewController {
         forbidden3.text = word?.wordForbidden3
         forbidden4.text = word?.wordForbidden4
         forbidden5.text = word?.wordForbidden5
+        print("sebeini bilmek isterim ")
         
         if self.takimchange
         {
