@@ -17,7 +17,7 @@ var teamTwoScore = 0
 class PlayGameViewController: UIViewController {
     
     
-    
+  //  let defaultsSettings = UserDefaults.standard
     /////
     
     // play view style telling properties
@@ -43,13 +43,21 @@ class PlayGameViewController: UIViewController {
    
     
     
+    @IBOutlet weak var firstTeamNameLbl: UILabel!
+    
+    @IBOutlet weak var secondTeamNameLbl: UILabel!
     
     // takimlari degistirir
     
     var takimchange = true
     // timer
-    var runCount = selectedTime
-    var pasLimitCount = skipNumber
+    
+//    skipSlider.setValue(Float(defaultsSettings.integer(forKey: "ShipSlider")), animated: true)
+//    timeSLider.setValue(Float(defaultsSettings.integer(forKey: "TellingTime")), animated: true)
+//    drawTimeSlider.setValue(Float(defaultsSettings.integer(forKey: "DrawingTime")), animated: true)
+//    scoreSlider.setValue(Float(defaultsSettings.integer(forKey: "WinScore")), animated: true)
+    var runCount = defaultsSettings.integer(forKey: "TellingTime")
+    var pasLimitCount = defaultsSettings.integer(forKey: "ShipSlider")
     
     @IBOutlet weak var passButton: UIButton!
     
@@ -113,6 +121,10 @@ class PlayGameViewController: UIViewController {
        
         }
         
+        // naming label names
+        
+        firstTeamNameLbl.text = firstTeamNam
+        secondTeamNameLbl.text = secondTeamNam
         
        
 
@@ -142,7 +154,7 @@ class PlayGameViewController: UIViewController {
     
     private func alertTelling(){
         
-        let alert = UIAlertController(title: "Diğer takım hazır mı ?", message: "It's recommended you bring your towel before continuing.", preferredStyle: .alert)
+        let alert = UIAlertController(title: "Diğer takım hazır mı ?", message: "takım hazır oldugunda yenı kelime gelecek", preferredStyle: .alert)
 
         alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: nil))
         //alert.addAction(UIAlertAction(title: "No", style: .cancel, handler: nil))

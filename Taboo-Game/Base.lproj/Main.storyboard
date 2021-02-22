@@ -661,36 +661,6 @@ Oyuncular kelimelerinizle oynasın</string>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="2. Takım" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0b7-5v-oPI">
-                                <rect key="frame" x="-1" y="442" width="250" height="80"/>
-                                <color key="backgroundColor" red="1" green="0.44833618510000001" blue="0.49799131769999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="80" id="lQS-lL-MDo"/>
-                                </constraints>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="____________" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WeP-Qh-qe3">
-                                <rect key="frame" x="-1" y="412" width="160" height="40"/>
-                                <color key="backgroundColor" red="1" green="0.45742413679999999" blue="0.51693458039999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="hk7-q6-6E3"/>
-                                </constraints>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1. Takım" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xFg-r3-qdm">
-                                <rect key="frame" x="154" y="288" width="250" height="80"/>
-                                <color key="backgroundColor" red="1" green="0.44833618510000001" blue="0.49799131769999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="80" id="R9i-pU-fc9"/>
-                                </constraints>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="____________" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="poF-gy-oBB">
                                 <rect key="frame" x="254" y="258" width="160" height="40"/>
                                 <color key="backgroundColor" red="1" green="0.45742413679999999" blue="0.51693458039999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -700,6 +670,9 @@ Oyuncular kelimelerinizle oynasın</string>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="firstTeamNameEditingEnd:" destination="DBt-Gm-FCt" eventType="editingDidEnd" id="VLa-Wd-HnX"/>
+                                </connections>
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gdV-or-NnC">
                                 <rect key="frame" x="-94" y="713" width="600" height="600"/>
@@ -720,7 +693,7 @@ Oyuncular kelimelerinizle oynasın</string>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gHa-hM-U0p">
-                                        <rect key="frame" x="127" y="8" width="60" height="60"/>
+                                        <rect key="frame" x="127" y="96" width="60" height="60"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="9BI-zA-Vsb"/>
@@ -736,41 +709,74 @@ Oyuncular kelimelerinizle oynasın</string>
                                     <constraint firstItem="fYP-Wq-iO4" firstAttribute="centerX" secondItem="gdV-or-NnC" secondAttribute="centerX" id="0oW-nQ-xX1"/>
                                     <constraint firstItem="fYP-Wq-iO4" firstAttribute="top" secondItem="gdV-or-NnC" secondAttribute="top" constant="-25" id="Y5q-n6-hPt"/>
                                     <constraint firstItem="fYP-Wq-iO4" firstAttribute="leading" secondItem="gHa-hM-U0p" secondAttribute="trailing" constant="38" id="bHu-E7-yoB"/>
-                                    <constraint firstItem="gHa-hM-U0p" firstAttribute="top" secondItem="gdV-or-NnC" secondAttribute="topMargin" id="owD-Gc-RtU"/>
+                                    <constraint firstItem="gHa-hM-U0p" firstAttribute="top" secondItem="gdV-or-NnC" secondAttribute="topMargin" constant="88" id="owD-Gc-RtU"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 player" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vEv-th-Uag">
+                                <rect key="frame" x="180" y="295" width="234" height="78"/>
+                                <color key="backgroundColor" red="0.99698072670000004" green="0.40236014129999997" blue="0.48626583810000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="78" id="nMT-5T-0ie"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2 player       " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kwn-GR-XW6">
+                                <rect key="frame" x="0.0" y="452" width="234" height="78"/>
+                                <color key="backgroundColor" red="0.99698072670000004" green="0.40236014129999997" blue="0.48626583810000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="78" id="mur-Zw-yRW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="____________" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WeP-Qh-qe3">
+                                <rect key="frame" x="0.0" y="413" width="145" height="40"/>
+                                <color key="backgroundColor" red="1" green="0.45742413679999999" blue="0.51693458039999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="hk7-q6-6E3"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="secondTeamNameEditingEnd:" destination="DBt-Gm-FCt" eventType="editingDidEnd" id="8Jb-kK-aWi"/>
+                                </connections>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="hqt-zO-lMO"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="0b7-5v-oPI" firstAttribute="top" secondItem="xFg-r3-qdm" secondAttribute="bottom" constant="74" id="09t-HR-Fvb"/>
-                            <constraint firstItem="P3K-sY-cKq" firstAttribute="leading" secondItem="hqt-zO-lMO" secondAttribute="leading" constant="56" id="2ah-v6-kDX"/>
-                            <constraint firstItem="gdV-or-NnC" firstAttribute="leading" secondItem="4zq-yq-Iep" secondAttribute="leading" constant="-94" id="3Bl-w5-DcW"/>
-                            <constraint firstItem="xFg-r3-qdm" firstAttribute="leading" secondItem="hqt-zO-lMO" secondAttribute="leading" constant="154" id="3dd-bz-0FT"/>
-                            <constraint firstItem="hqt-zO-lMO" firstAttribute="trailing" secondItem="P3K-sY-cKq" secondAttribute="trailing" constant="58" id="5hl-kX-Wx5"/>
-                            <constraint firstAttribute="bottom" secondItem="gdV-or-NnC" secondAttribute="bottom" constant="-417" id="5tb-Yr-Wcq"/>
+                            <constraint firstItem="WeP-Qh-qe3" firstAttribute="leading" secondItem="kwn-GR-XW6" secondAttribute="leading" id="9nz-hL-EnQ"/>
+                            <constraint firstItem="hqt-zO-lMO" firstAttribute="trailing" secondItem="P3K-sY-cKq" secondAttribute="trailing" constant="58" id="9xD-9b-JXj"/>
+                            <constraint firstItem="vEv-th-Uag" firstAttribute="leading" secondItem="hqt-zO-lMO" secondAttribute="leading" constant="180" id="BSf-y3-Lya"/>
                             <constraint firstItem="P3K-sY-cKq" firstAttribute="top" secondItem="hqt-zO-lMO" secondAttribute="top" constant="53" id="DOp-5T-2mr"/>
+                            <constraint firstAttribute="bottom" secondItem="gdV-or-NnC" secondAttribute="bottom" constant="-417" id="G23-7Q-jUw"/>
+                            <constraint firstItem="gdV-or-NnC" firstAttribute="top" secondItem="4zq-yq-Iep" secondAttribute="top" constant="713" id="Gpx-nr-mHp"/>
+                            <constraint firstAttribute="bottom" secondItem="kwn-GR-XW6" secondAttribute="bottom" constant="366" id="Ksw-bW-CYs"/>
+                            <constraint firstItem="WeP-Qh-qe3" firstAttribute="top" secondItem="4zq-yq-Iep" secondAttribute="top" constant="413" id="LVm-XG-GcK"/>
                             <constraint firstItem="poF-gy-oBB" firstAttribute="top" secondItem="P3K-sY-cKq" secondAttribute="bottom" constant="81" id="PBh-jt-Mln"/>
                             <constraint firstItem="gdV-or-NnC" firstAttribute="centerX" secondItem="P3K-sY-cKq" secondAttribute="centerX" id="PZr-Ho-kZu"/>
-                            <constraint firstItem="gdV-or-NnC" firstAttribute="top" secondItem="4zq-yq-Iep" secondAttribute="top" constant="713" id="Ukl-JC-D3E"/>
-                            <constraint firstItem="0b7-5v-oPI" firstAttribute="leading" secondItem="WeP-Qh-qe3" secondAttribute="leading" id="XJm-Hv-cMB"/>
                             <constraint firstItem="poF-gy-oBB" firstAttribute="leading" secondItem="hqt-zO-lMO" secondAttribute="leading" constant="254" id="XfH-dk-HU9"/>
-                            <constraint firstItem="hqt-zO-lMO" firstAttribute="trailing" secondItem="WeP-Qh-qe3" secondAttribute="trailing" constant="255" id="YJ8-EW-WhV"/>
+                            <constraint firstItem="hqt-zO-lMO" firstAttribute="trailing" secondItem="WeP-Qh-qe3" secondAttribute="trailing" constant="269" id="YJ8-EW-WhV"/>
                             <constraint firstItem="poF-gy-oBB" firstAttribute="trailing" secondItem="hqt-zO-lMO" secondAttribute="trailing" id="aSH-98-A4u"/>
-                            <constraint firstItem="WeP-Qh-qe3" firstAttribute="top" secondItem="xFg-r3-qdm" secondAttribute="bottom" constant="44" id="cpG-ZX-Gl3"/>
-                            <constraint firstItem="xFg-r3-qdm" firstAttribute="top" secondItem="4zq-yq-Iep" secondAttribute="top" constant="288" id="epp-4c-3k4"/>
-                            <constraint firstItem="hqt-zO-lMO" firstAttribute="trailing" secondItem="0b7-5v-oPI" secondAttribute="trailing" constant="165" id="hK5-fJ-nV7"/>
-                            <constraint firstItem="hqt-zO-lMO" firstAttribute="trailing" secondItem="xFg-r3-qdm" secondAttribute="trailing" constant="10" id="wwN-qh-Bnd"/>
-                            <constraint firstItem="WeP-Qh-qe3" firstAttribute="leading" secondItem="4zq-yq-Iep" secondAttribute="leadingMargin" constant="-21" id="xHb-N8-uf8"/>
+                            <constraint firstItem="gdV-or-NnC" firstAttribute="leading" secondItem="4zq-yq-Iep" secondAttribute="leading" constant="-94" id="gTd-LU-Y9D"/>
+                            <constraint firstItem="hqt-zO-lMO" firstAttribute="trailing" secondItem="kwn-GR-XW6" secondAttribute="trailing" constant="180" id="hA7-48-Sfn"/>
+                            <constraint firstItem="vEv-th-Uag" firstAttribute="trailing" secondItem="poF-gy-oBB" secondAttribute="trailing" id="i4L-gX-mdE"/>
+                            <constraint firstItem="P3K-sY-cKq" firstAttribute="leading" secondItem="hqt-zO-lMO" secondAttribute="leading" constant="56" id="j5x-hB-rb8"/>
+                            <constraint firstItem="kwn-GR-XW6" firstAttribute="top" secondItem="vEv-th-Uag" secondAttribute="bottom" constant="79" id="pfx-9x-OFc"/>
+                            <constraint firstItem="WeP-Qh-qe3" firstAttribute="leading" secondItem="hqt-zO-lMO" secondAttribute="leading" id="pth-rc-Osg"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="OyC-vI-bGD"/>
                     <connections>
-                        <outlet property="firstTeamLabel" destination="xFg-r3-qdm" id="M2s-HW-QrA"/>
+                        <outlet property="firstTeamLabel" destination="vEv-th-Uag" id="ldZ-ME-uub"/>
                         <outlet property="firstTeamName" destination="poF-gy-oBB" id="Fvc-JW-OAe"/>
                         <outlet property="homeButton" destination="gHa-hM-U0p" id="D3v-yo-Wrf"/>
                         <outlet property="oYeay" destination="gdV-or-NnC" id="tUN-aL-wTa"/>
-                        <outlet property="secondTeamLabel" destination="0b7-5v-oPI" id="7N8-oe-k4M"/>
+                        <outlet property="secondTeamLabel" destination="kwn-GR-XW6" id="q80-D7-xdH"/>
                         <outlet property="secondTeamName" destination="WeP-Qh-qe3" id="agS-Cu-tCM"/>
                         <outlet property="startGame" destination="fYP-Wq-iO4" id="6Eq-ZM-PbU"/>
                         <outlet property="teamsLabel" destination="P3K-sY-cKq" id="l14-T7-VXK"/>
@@ -779,7 +785,7 @@ Oyuncular kelimelerinizle oynasın</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jPL-IY-mQI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1709" y="80"/>
+            <point key="canvasLocation" x="1708.6956521739132" y="79.6875"/>
         </scene>
         <!--Play Game View Controller-->
         <scene sceneID="Y1t-Ia-H59">
@@ -952,6 +958,7 @@ Oyuncular kelimelerinizle oynasın</string>
                         <outlet property="circleView" destination="wF8-YT-veM" id="EHk-SZ-gUh"/>
                         <outlet property="drawingDelete" destination="SSK-pu-DNh" id="nID-8M-6sz"/>
                         <outlet property="firsTeamScore" destination="3q1-1w-9HO" id="3Qm-GC-8KQ"/>
+                        <outlet property="firstTeamNameLbl" destination="zva-14-v41" id="RYE-F4-H4k"/>
                         <outlet property="forbidden1" destination="cBO-vl-hMC" id="cOV-2B-NUB"/>
                         <outlet property="forbidden2" destination="bNQ-jY-aSz" id="Ypu-4U-Lhi"/>
                         <outlet property="forbidden3" destination="mAa-mf-DOw" id="R0d-z9-PT4"/>
@@ -960,6 +967,7 @@ Oyuncular kelimelerinizle oynasın</string>
                         <outlet property="nextButton" destination="Vpm-cW-bEc" id="ne7-pU-uGe"/>
                         <outlet property="passButton" destination="ZSA-eL-UvQ" id="bxA-KO-2wx"/>
                         <outlet property="passCountLbl" destination="pjo-Gp-UM1" id="VvE-BY-olF"/>
+                        <outlet property="secondTeamNameLbl" destination="kdm-SC-OAS" id="lyz-Y0-dVL"/>
                         <outlet property="secondTeamScore" destination="pIn-GO-TVC" id="732-pp-ehG"/>
                         <outlet property="tabooCardView" destination="jFE-ih-7Wm" id="0ac-be-Wbl"/>
                         <outlet property="timerTableLbl" destination="lSX-zT-ODz" id="lJV-YP-0hT"/>
