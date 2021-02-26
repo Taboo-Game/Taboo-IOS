@@ -7,16 +7,26 @@
 
 import UIKit
 
+
+public var firstTeamNam = ""
+public var secondTeamNam = ""
+
 class TeamsViewController: UIViewController {
+    
+   
+   
+    
     @IBOutlet weak var teamsLabel: UILabel!
     
     @IBOutlet weak var firstTeamName: UITextField!
     
     @IBOutlet weak var secondTeamName: UITextField!
     
-    @IBOutlet weak var firstTeamLabel: UITextField!
+    //@IBOutlet weak var firstTeamLabel: UITextField!
+    @IBOutlet weak var firstTeamLabel: UILabel!
     
-    @IBOutlet weak var secondTeamLabel: UITextField!
+   // @IBOutlet weak var secondTeamLabel: UITextField!
+    @IBOutlet weak var secondTeamLabel: UILabel!
     
     @IBOutlet weak var oYeay: UIView!
     
@@ -41,13 +51,60 @@ class TeamsViewController: UIViewController {
         startGame.layer.cornerRadius = startGame.frame.height/4
         
         
-        // Do any additional setup after loading the view.
+        // properties texfield
+        firstTeamName.clearsOnBeginEditing = true
+        
+        secondTeamName.clearsOnBeginEditing = true
+        firstTeamName.returnKeyType = .done
+        secondTeamName.returnKeyType = .done
+        
+            // extField.returnKeyType = .done
+        //firstTeamName.
+       
         
     }
+    
+    // settings properties  texfields
+    @IBAction func secondTeamNameEditingEnd(_ sender: Any) {
+        
+       // print("hava ayaz")
+        if ((secondTeamName.text?.elementsEqual("")) == true) {
+            secondTeamName.text = "____________"
+        }else{
+            print("alemin karli geliyor ")
+            
+        }
+    }
+    @IBAction func firstTeamNameEditingEnd(_ sender: Any) {
+       // print("hava ayaz")
+        
+        
+        if ((firstTeamName.text?.elementsEqual("")) == true) {
+            
+            firstTeamName.text = "____________"
+            //print("bu bir denme yayinidir")
+        }else{
+           // firstTeamName =   "\(firstTeamName.text)/ \(secondTeamName.text)"
+            //print("deneme basarilir")
+            print("alemin karali 2 geliyor")
+            
+            
+        }
+    }
+    
+    
     override func viewWillAppear(_ animated: Bool) {
         
     }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toPlayGame"
+        {
+            secondTeamNam = secondTeamName.text!
+            firstTeamNam = firstTeamName.text!
+        }
+    }
     @IBAction func startGameClicked(_ sender: Any) {
+       
         performSegue(withIdentifier: "toPlayGame", sender: nil)
     }
     

@@ -7,10 +7,11 @@
 
 import UIKit
 
-var skipNumber = 3
-var selectedTime = 15
-var selectedDrawTime = 15
-var winPoint = 15
+//var skipNumber = 3
+//var selectedTime = 15
+//var selectedDrawTime = 15
+//var winPoint = 15
+public let defaultsSettings = UserDefaults.standard
 
 
 class SettingsViewController: UIViewController {
@@ -32,32 +33,100 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var scoreSlider: UISlider!
     
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        skipSlider.setValue(Float(3), animated: true)
-        timeSLider.setValue(Float(15), animated: true)
-        drawTimeSlider.setValue(Float(15), animated: true)
-        scoreSlider.setValue(Float(15), animated: true)
         
-        // Do any additional setup after loading the view.
+        
+        
+        skipSlider.setValue(Float(defaultsSettings.integer(forKey: "ShipSlider")), animated: true)
+        timeSLider.setValue(Float(defaultsSettings.integer(forKey: "TellingTime")), animated: true)
+        drawTimeSlider.setValue(Float(defaultsSettings.integer(forKey: "DrawingTime")), animated: true)
+        scoreSlider.setValue(Float(defaultsSettings.integer(forKey: "WinScore")), animated: true)
+        
+        
+        
+        
+        timeSLider.value = Float(defaultsSettings.integer(forKey: "TellingTime"))
+//        if Float(defaultsSettings.integer(forKey: "ShipSlider")) as? Bool !=  true {
+//            print("heyo ")
+//        }
+        
+        if defaultsSettings.bool(forKey: "ShipSlider") {
+            skipLabel.text = String(defaultsSettings.integer(forKey: "ShipSlider"))
+        }
+        else{
+            
+            skipSlider.setValue(Float(3), animated: true)
+            defaultsSettings.setValue(Float(3), forKey: "ShipSlider")
+            skipSlider.setValue(Float(defaultsSettings.integer(forKey: "ShipSlider")), animated: true)
+            skipLabel.text = String(defaultsSettings.integer(forKey: "ShipSlider"))
+            
+            
+        }
+        if defaultsSettings.bool(forKey: "TellingTime") {
+            timeLabel.text = String(defaultsSettings.integer(forKey: "TellingTime"))
+        }
+        else{
+            timeSLider.setValue(Float(15), animated: true)
+            defaultsSettings.setValue(Float(15), forKey: "TellingTime")
+            timeSLider.setValue(Float(defaultsSettings.integer(forKey: "TellingTime")), animated: true)
+            timeLabel.text = String(defaultsSettings.integer(forKey: "TellingTime"))
+        }
+        if defaultsSettings.bool(forKey: "DrawingTime") {
+          
+            drawTime.text = String(defaultsSettings.integer(forKey: "DrawingTime"))
+            
+        }
+        else{
+            drawTimeSlider.setValue(Float(20), animated: true)
+            defaultsSettings.setValue(Float(20), forKey: "DrawingTime")
+            drawTimeSlider.setValue(Float(defaultsSettings.integer(forKey: "DrawingTime")), animated: true)
+            drawTime.text = String(defaultsSettings.integer(forKey: "DrawingTime"))
+            
+        }
+        if defaultsSettings.bool(forKey: "WinScore") {
+            winScoreLabel.text = String(defaultsSettings.integer(forKey: "WinScore"))
+        }
+        else{
+            scoreSlider.setValue(Float(30), animated: true)
+            defaultsSettings.setValue(Float(30), forKey: "WinScore")
+            scoreSlider.setValue(Float(defaultsSettings.integer(forKey: "WinScore")), animated: true)
+            winScoreLabel.text = String(defaultsSettings.integer(forKey: "WinScore"))
+        }
+        
+        
     }
     
     @IBAction func skipChanged(_ sender: UISlider) {
         let currentValue = Int((sender.value))
         let temp : Double = (0.5) + Double(currentValue)
         skipSlider.setValue(Float(temp), animated: true)
-        skipNumber = Int(currentValue)
+       // skipNumber = Int(currentValue)
         skipLabel.text = "\(currentValue)"
+        let defaultsSettings = UserDefaults.standard
+        
+        defaultsSettings.setValue(currentValue, forKey: "ShipSlider")
+        
+        
+        
     }
     
     @IBAction func timeChanged(_ sender: UISlider) {
         let currentValue = Int((sender.value))
         let temp : Double = (0.5) + Double(currentValue)
         timeSLider.setValue(Float(temp), animated: true)
-        selectedTime =  Int(currentValue)
+        //selectedTime =  Int(currentValue)
         
         timeLabel.text = "\(currentValue)"
+        
+        let defaultsSettings = UserDefaults.standard
+        
+        defaultsSettings.setValue(currentValue, forKey: "TellingTime")
+        
+        
     }
     
     
@@ -65,16 +134,28 @@ class SettingsViewController: UIViewController {
         let currentValue = Int((sender.value))
         let temp : Double = (0.5) + Double(currentValue)
         drawTimeSlider.setValue(Float(temp), animated: true)
-        selectedDrawTime = Int(currentValue)
+        //selectedDrawTime = Int(currentValue)
         drawTime.text = "\(currentValue)"
+        
+        let defaultsSettings = UserDefaults.standard
+        
+        defaultsSettings.setValue(currentValue, forKey: "DrawingTime")
+        
+        
     }
     
     @IBAction func winSocreChange(_ sender: UISlider) {
         let currentValue = Int((sender.value))
         let temp : Double = (0.5) + Double(currentValue)
         scoreSlider.setValue(Float(temp), animated: true)
-        winPoint = Int(currentValue)
+        //winPoint = Int(currentValue)
         winScoreLabel.text = "\(currentValue)"
+        let defaultsSettings = UserDefaults.standard
+        
+        defaultsSettings.setValue(currentValue, forKey: "WinScore")
+        
+        
+        
     }
     
     @IBAction func myWordsClicked(_ sender: Any) {
